@@ -8,7 +8,7 @@ function cdmdirect_setup() {
 
 	register_nav_menus(
 		array(
-			'primary' => __( 'Primary Menu', 'tailpress' ),
+			'primary' => __( 'Primary Menu', 'cdm' ),
 		)
 	);
 
@@ -41,8 +41,8 @@ add_action( 'after_setup_theme', 'cdmdirect_setup' );
 function cdmdirect_enqueue_scripts() {
 	$theme = wp_get_theme();
 
-	wp_enqueue_style( 'tailpress', cdmdirect_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
-	wp_enqueue_script( 'tailpress', cdmdirect_asset( 'js/app.js' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_style( 'cdm', cdmdirect_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_script( 'cdm', cdmdirect_asset( 'js/app.js' ), array(), $theme->get( 'Version' ) );
 }
 
 add_action( 'wp_enqueue_scripts', 'cdmdirect_enqueue_scripts' );
