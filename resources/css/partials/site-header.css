@@ -1,0 +1,45 @@
+.site-header,
+#top-nav .top-nav--container,
+#top-nav .top-nav--ul,
+#top-nav .svg-icon,
+#main-nav,
+#main-nav .main-nav--div,
+#main-nav .main-nav--ul > li > a,
+#main-nav #logo img {
+  @apply transition-all duration-500;
+}
+
+.site-header {
+  @apply bg-transparent;
+  &.header-shrink {
+    @apply bg-brand-bluedark bg-opacity-95;
+    #top-nav {
+      .top-nav--container {
+        @apply py-1;
+      }
+      .top-nav--ul {
+        @apply gap-x-2;
+      }
+      .svg-icon {
+        @apply h-[18px] w-[18px];
+      }
+    }
+    #main-nav {
+      @apply py-0;
+      #logo {
+        @apply py-2;
+        img {
+          @apply h-16;
+        }
+      }
+      .main-nav--div {
+        @apply shadow-none;
+      }
+      .main-nav--ul {
+        > li > a {
+          @apply py-5 leading-[36px];
+        }
+      }
+    }
+  }
+}

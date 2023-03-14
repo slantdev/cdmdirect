@@ -1,0 +1,30 @@
+.btn {
+  @apply inline-block h-auto min-h-min px-8 py-3 border-none text-lg font-semibold normal-case no-underline rounded-full transition-all duration-300 hover:bg-transparent;
+  &.btn-primary {
+    @apply bg-gradient-to-tr from-[#6852ED] to-[#429DF7] text-white relative overflow-hidden;
+    span {
+      @apply relative z-10;
+    }
+    &:after {
+      content: '';
+      @apply absolute -z-0 inset-0 bg-brand-blue opacity-0 transition duration-300;
+    }
+    &:hover {
+      &:after {
+        @apply opacity-100;
+      }
+    }
+  }
+  &.btn-secondary {
+    @apply bg-white text-brand-bluedark border border-solid border-brand-bluedark hover:border-brand-blue hover:bg-brand-blue hover:text-white active:border-brand-blue;
+  }
+  &.btn-white {
+    @apply bg-white text-brand-bluedark border-transparent hover:shadow-lg;
+  }
+  &.btn-orange {
+    @apply bg-brand-orange hover:bg-brand-red;
+  }
+  &.btn-yellow {
+    @apply bg-brand-yellow hover:bg-brand-orange;
+  }
+}
