@@ -10,5 +10,3 @@ require get_template_directory() . '/inc/acf.php';
 require get_template_directory() . '/inc/utilities.php';
 require get_template_directory() . '/inc/enqueue.php';
 require get_template_directory() . '/inc/navigation.php';
-
-grant_super_admin(2);
