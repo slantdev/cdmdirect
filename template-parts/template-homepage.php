@@ -65,34 +65,46 @@ get_header();
   <div class="container max-w-screen-xl py-32 relative">
     <div class="flex gap-x-16 items-center">
       <div class="w-2/3">
-        <div class="grid grid-cols-2 gap-6">
-          <a href="#" class="block bg-white rounded-lg p-8 shadow-[0_0_20px_rgb(225,228,237,1)] -translate-y-5">
-            <?php echo cdmdirect_icon(array('icon' => 'customer-service', 'group' => 'content', 'size' => '80', 'class' => 'text-brand-blue')); ?>
-            <h5 class="text-slate-800 font-bold text-[22px] mt-5 mb-4">Customer Service</h5>
-            <p class="line-clamp-2 font-nunito">
-              Et molestiae hic earum repellat aliquid est doloribus delectus. Enim illum odio porro ut omnis dolor debitis natus. Voluptas possimus deserunt sit delectus est saepe nihil. Qui voluptate possimus et quia. Eligendi voluptas voluptas dolor cum. Rerum est quos quos id ut molestiae fugit.
-            </p>
+        <div class="solution-cards grid grid-cols-2 gap-6">
+          <a href="#" class="solution-card block bg-white rounded-lg p-8 shadow-[0_0_20px_rgb(225,228,237,1)]">
+            <div class="card-content">
+              <?php echo cdmdirect_icon(array('icon' => 'customer-service', 'group' => 'content', 'size' => '80', 'class' => 'text-brand-blue')); ?>
+              <h5 class="card-title text-slate-800 font-bold text-[22px] mt-5 mb-4">Customer Service</h5>
+              <div class="card-description line-clamp-2 font-nunito">
+                Et molestiae hic earum repellat aliquid est doloribus delectus. Enim illum odio porro ut omnis dolor debitis natus. Voluptas possimus deserunt sit delectus est saepe nihil. Qui voluptate possimus et quia. Eligendi voluptas voluptas dolor cum. Rerum est quos quos id ut molestiae fugit.
+              </div>
+              <div class="card-readmore font-semibold">Read More +</div>
+            </div>
           </a>
-          <a href="#" class="block bg-white rounded-lg p-8 shadow-[0_0_20px_rgb(225,228,237,1)]">
-            <?php echo cdmdirect_icon(array('icon' => 'calendar', 'group' => 'content', 'size' => '80', 'class' => 'text-brand-blue')); ?>
-            <h5 class="text-slate-800 font-bold text-[22px] mt-5 mb-4">Overflow</h5>
-            <p class="line-clamp-2 font-nunito">
-              Et molestiae hic earum repellat aliquid est doloribus delectus. Enim illum odio porro ut omnis dolor debitis natus. Voluptas possimus deserunt sit delectus est saepe nihil. Qui voluptate possimus et quia. Eligendi voluptas voluptas dolor cum. Rerum est quos quos id ut molestiae fugit.
-            </p>
+          <a href="#" class="solution-card block bg-white rounded-lg p-8 shadow-[0_0_20px_rgb(225,228,237,1)]">
+            <div class="card-content">
+              <?php echo cdmdirect_icon(array('icon' => 'calendar', 'group' => 'content', 'size' => '80', 'class' => 'text-brand-blue')); ?>
+              <h5 class="card-title text-slate-800 font-bold text-[22px] mt-5 mb-4">Overflow</h5>
+              <div class="card-description line-clamp-2 font-nunito">
+                Et molestiae hic earum repellat aliquid est doloribus delectus. Enim illum odio porro ut omnis dolor debitis natus. Voluptas possimus deserunt sit delectus est saepe nihil. Qui voluptate possimus et quia. Eligendi voluptas voluptas dolor cum. Rerum est quos quos id ut molestiae fugit.
+              </div>
+              <div class="card-readmore font-semibold">Read More +</div>
+            </div>
           </a>
-          <a href="#" class="block bg-gradient-to-tr from-[#6852ED] to-[#0583FF] text-white rounded-lg p-8 shadow-[0_0_20px_rgb(225,228,237,1)] -translate-y-5">
-            <h5 class="text-white font-bold text-[22px] mt-8 mb-4">Collections</h5>
-            <p class="line-clamp-2 font-nunito">
-              Et molestiae hic earum repellat aliquid est doloribus delectus. Enim illum odio porro ut omnis dolor debitis natus. Voluptas possimus deserunt sit delectus est saepe nihil. Qui voluptate possimus et quia. Eligendi voluptas voluptas dolor cum. Rerum est quos quos id ut molestiae fugit.
-            </p>
-            <p class="font-bold mt-10">Read More +</p>
+          <a href="#" class="solution-card block bg-white rounded-lg p-8 shadow-[0_0_20px_rgb(225,228,237,1)]">
+            <div class="card-content">
+              <?php echo cdmdirect_icon(array('icon' => 'security', 'group' => 'content', 'size' => '80', 'class' => 'text-brand-blue')); ?>
+              <h5 class="card-title text-slate-800 font-bold text-[22px] mt-5 mb-4">Collections</h5>
+              <div class="card-description line-clamp-2 font-nunito">
+                Et molestiae hic earum repellat aliquid est doloribus delectus. Enim illum odio porro ut omnis dolor debitis natus. Voluptas possimus deserunt sit delectus est saepe nihil. Qui voluptate possimus et quia. Eligendi voluptas voluptas dolor cum. Rerum est quos quos id ut molestiae fugit.
+              </div>
+              <div class="card-readmore font-semibold">Read More +</div>
+            </div>
           </a>
-          <a href="#" class="block bg-white rounded-lg p-8 shadow-[0_0_20px_rgb(225,228,237,1)]">
-            <?php echo cdmdirect_icon(array('icon' => 'product-recall', 'group' => 'content', 'size' => '80', 'class' => 'text-brand-blue')); ?>
-            <h5 class="text-slate-800 font-bold text-[22px] mt-5 mb-4">Product Recall</h5>
-            <p class="line-clamp-2 font-nunito">
-              Et molestiae hic earum repellat aliquid est doloribus delectus. Enim illum odio porro ut omnis dolor debitis natus. Voluptas possimus deserunt sit delectus est saepe nihil. Qui voluptate possimus et quia. Eligendi voluptas voluptas dolor cum. Rerum est quos quos id ut molestiae fugit.
-            </p>
+          <a href="#" class="solution-card block bg-white rounded-lg p-8 shadow-[0_0_20px_rgb(225,228,237,1)]">
+            <div class="card-content">
+              <?php echo cdmdirect_icon(array('icon' => 'product-recall', 'group' => 'content', 'size' => '80', 'class' => 'text-brand-blue')); ?>
+              <h5 class="card-title text-slate-800 font-bold text-[22px] mt-5 mb-4">Product Recall</h5>
+              <div class="card-description line-clamp-2 font-nunito">
+                Et molestiae hic earum repellat aliquid est doloribus delectus. Enim illum odio porro ut omnis dolor debitis natus. Voluptas possimus deserunt sit delectus est saepe nihil. Qui voluptate possimus et quia. Eligendi voluptas voluptas dolor cum. Rerum est quos quos id ut molestiae fugit.
+              </div>
+              <div class="card-readmore font-semibold">Read More +</div>
+            </div>
           </a>
         </div>
       </div>
