@@ -1,0 +1,77 @@
+.breadcrumb {
+  @apply text-base text-slate-800;
+  > span {
+    @apply flex gap-x-3;
+  }
+  a {
+    @apply hover:text-brand-blue;
+  }
+}
+
+#hero-slider {
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply text-white hover:text-brand-blue;
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    @apply left-2 md:left-4 lg:left-5 xl:left-8;
+  }
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    @apply right-2 md:right-4 lg:right-5 xl:right-8;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    @apply bottom-2 md:bottom-4 lg:bottom-5 xl:bottom-8;
+  }
+  .swiper-pagination-bullet {
+    @apply w-3 h-3 bg-white opacity-20;
+  }
+  .swiper-pagination-bullet-active {
+    @apply bg-white opacity-100;
+  }
+}
+
+.solution-cards {
+  .solution-card {
+    @apply relative transition-all duration-300;
+    .card-content {
+      @apply relative transition-all duration-300;
+    }
+    .card-readmore {
+      @apply absolute -bottom-16 left-0 text-white invisible opacity-0;
+    }
+    .svg-icon,
+    .card-title,
+    .card-description,
+    .card-readmore {
+      @apply transition-all duration-200;
+    }
+    .card-description {
+      @apply text-slate-500;
+    }
+    &:nth-child(odd) {
+      @apply -translate-y-5;
+    }
+    &:hover {
+      @apply bg-gradient-to-tr from-[#6852ED] to-[#0583FF] shadow-[0_0_20px_rgb(66,157,247,1)];
+      .card-content {
+        @apply -translate-y-[72px] text-white;
+      }
+      .card-content,
+      .card-title,
+      .card-description {
+        @apply text-white;
+      }
+      .svg-icon {
+        @apply opacity-0;
+      }
+      .card-readmore {
+        @apply visible opacity-100;
+      }
+    }
+  }
+}

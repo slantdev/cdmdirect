@@ -1,0 +1,15 @@
+{
+  "name": "slant/cdmdirect",
+  "description": "CDM Direct Theme",
+  "authors": [
+    {
+      "name": "Slant Agency",
+      "email": "developer@slant.agency"
+    }
+  ],
+  "type": "git",
+  "url": "https://github.com/houke/acf-icon-picker",
+  "require": {
+    "houke/acf-icon-picker": "dev-master"
+  }
+}

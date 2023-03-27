@@ -36,7 +36,7 @@ get_header();
   </div>
 </div>
 
-<!-- Contact Form -->
+<!-- Text + Image -->
 <section class="bg-white py-32">
   <div class="container max-w-screen-xl">
     <div class="flex gap-x-16">
