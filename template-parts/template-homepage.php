@@ -324,7 +324,7 @@ get_header();
     </div>
     <p class="font-nunito text-lg">We’re more like a knowledge warehouse; you’ll find every conceivable customer care solution your business needs to grow bigger, faster, stronger – all under one roof. But 30 years serving at the frontlines of customer service has taught us that it’s not until you convert that knowledge into wisdom and insight that the magic really happens.</p>
   </div>
-  <div class="container max-w-screen-lg mt-20">
+  <div class="container max-w-screen-xl mt-20">
     <div class="grid grid-cols-3 gap-20">
       <div>
         <div class="mb-4">

@@ -76,7 +76,6 @@ $button = get_sub_field('button');
                 } ?>
 
               <?php endforeach; ?>
-
             </div>
           <?php endif; ?>
         </div>

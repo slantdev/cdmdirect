@@ -4973,6 +4973,14 @@ h6,
        column-gap: 0.25rem;
 }
 
+.gap-y-8 {
+  row-gap: 2rem;
+}
+
+.gap-y-12 {
+  row-gap: 3rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }

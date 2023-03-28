@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Whitepapers
+ * Template Name: Resources
  * Template Post Type: page
  *
  */

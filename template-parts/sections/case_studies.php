@@ -8,6 +8,17 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
  * $section_padding_bottom
 */
 
+$sub_headline = get_sub_field('sub_headline');
+$sub_headline_border = get_sub_field('sub_headline_border');
+$sub_headline_border = array(
+  'border_enable' => $sub_headline_border['add_border_bottom'],
+  'border_color' => $sub_headline_border['border_color'],
+  'border_size' => $sub_headline_border['border_size']
+);
+
+$headline = get_sub_field('headline');
+$view_all_link = get_sub_field('view_all_link');
+
 ?>
 
 <section id="<?php echo $section_id ?>" style="<?php echo $section_style ?>">
@@ -15,11 +26,17 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
     <div class="container max-w-screen-xl relative">
       <div class="flex gap-x-12">
         <div class="w-1/2">
-          <h4><span class="inline-block pb-3 border-b-2 border-brand-blue text-lg text-slate-800 font-medium">Results we have delivered</span></h4>
-          <h3 class="text-[34px] leading-tight font-bold text-brand-bluedark mt-6 mb-6">Our Case Studies</h3>
+          <?php if ($sub_headline) { ?>
+            <?php get_template_part('template-parts/components/heading', '', array('field' => 'sub_headline', 'class' => 'font-medium text-slate-800', 'border' => $sub_headline_border)); ?>
+          <?php } ?>
+          <?php if ($headline) { ?>
+            <?php get_template_part('template-parts/components/heading', '', array('field' => 'headline', 'class' => 'leading-tight font-bold text-brand-bluedark mt-6 mb-6')); ?>
+          <?php } ?>
         </div>
         <div class="w-1/2 flex flex-col items-end">
-          <a href="#" class="text-brand-blue text-lg font-bold hover:underline">View All</a>
+          <?php if ($view_all_link) { ?>
+            <a href="<?php echo $view_all_link['url'] ?>" class="text-brand-blue text-lg font-bold hover:underline">View All</a>
+          <?php } ?>
           <!-- <select name="" id="" class="mt-6 rounded-full bg-white pl-8 pr-12 py-4 font-bold text-slate-800 border-none min-w-[280px] shadow-inner">
             <option value="">Featured</option>
             <option value="">Option 1</option>
@@ -29,36 +46,56 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
         </div>
       </div>
     </div>
-    <div class="container max-w-screen-xl pt-16 relative">
-      <div class="flex gap-x-12 items-center">
-        <div class="w-1/3">
-          <h3 class="text-[34px] leading-tight font-bold text-brand-blue mt-6 mb-6">Customer service for an automotive giant</h3>
-          <p class="text-lg mb-12 font-nunito">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-          </p>
-          <a href="#" class="btn btn-primary"><span>Read more</span></a>
-        </div>
-        <div class="w-2/3 pl-24">
-          <div class="aspect-w-8 aspect-h-6">
-            <img src='https://source.unsplash.com/3WAMh1omVAY/1600x900' alt='' class="object-cover h-full w-full rounded-tl-[300px] rounded-tr-[300px] rounded-br-[50px] rounded-bl-[300px]" />
-          </div>
+
+    <?php
+    $case_studies = get_sub_field('case_studies');
+    $case_studies_posts = $case_studies['case_studies_posts'];
+    if ($case_studies_posts) :
+    ?>
+      <div class="container max-w-screen-xl pt-16 relative">
+        <div class="flex flex-col gap-y-12">
+          <?php foreach ($case_studies_posts as $key => $post) :
+            $permalink = get_permalink($post->ID);
+            $title = get_the_title($post->ID);
+            $excerpt = get_the_excerpt($post->ID);
+            $thumbnail = get_the_post_thumbnail_url($post->ID, 'full');
+          ?>
+            <?php if ($key & 1) { ?>
+              <div class="flex gap-x-12 items-center">
+                <div class="w-1/3 order-2">
+                  <h3 class="text-[34px] leading-tight font-bold text-brand-blue mt-6 mb-6"><?php echo $title ?></h3>
+                  <div class="text-lg mb-12 font-nunito line-clamp-3">
+                    <?php echo $excerpt; ?>
+                  </div>
+                  <a href="<?php echo $permalink ?>" class="btn btn-primary"><span>Read more</span></a>
+                </div>
+                <div class="w-2/3 pr-24 order-1">
+                  <div class="aspect-w-8 aspect-h-6">
+                    <img src='<?php echo $thumbnail ?>' alt='' class="object-cover h-full w-full rounded-tl-[300px] rounded-tr-[300px] rounded-bl-[50px] rounded-br-[300px]" />
+                  </div>
+                </div>
+              </div>
+            <?php } else { ?>
+              <div class="flex gap-x-12 items-center">
+                <div class="w-1/3">
+                  <h3 class="text-[34px] leading-tight font-bold text-brand-blue mt-6 mb-6"><?php echo $title ?></h3>
+                  <div class="text-lg mb-12 font-nunito line-clamp-3">
+                    <?php echo $excerpt; ?>
+                  </div>
+                  <a href="<?php echo $permalink ?>" class="btn btn-primary"><span>Read more</span></a>
+                </div>
+                <div class="w-2/3 pl-24">
+                  <div class="aspect-w-8 aspect-h-6">
+                    <img src='<?php echo $thumbnail ?>' alt='' class="object-cover h-full w-full rounded-tl-[300px] rounded-tr-[300px] rounded-br-[50px] rounded-bl-[300px]" />
+                  </div>
+                </div>
+              </div>
+            <?php } ?>
+          <?php endforeach; ?>
         </div>
       </div>
-      <div class="flex gap-x-12 items-center mt-8">
-        <div class="w-1/3 order-2">
-          <h3 class="text-[34px] leading-tight font-bold text-brand-blue mt-6 mb-6">Managing Overflow for a Healthcare business</h3>
-          <p class="text-lg mb-12 font-nunito">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-          </p>
-          <a href="#" class="btn btn-primary"><span>Read more</span></a>
-        </div>
-        <div class="w-2/3 pr-24 order-1">
-          <div class="aspect-w-8 aspect-h-6">
-            <img src='https://source.unsplash.com/MFSEP2g4YS0/1600x900' alt='' class="object-cover h-full w-full rounded-tl-[300px] rounded-tr-[300px] rounded-bl-[50px] rounded-br-[300px]" />
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php endif; ?>
+
     <div class="absolute top-0 left-0 -z-10">
       <?php echo cdmdirect_svg(array('svg' => 'shape-1', 'group' => 'shape', 'width' => '1080', 'height' => '635', 'class' => 'text-[#ffffff] rotate-[5deg] translate-y-[50px] -translate-x-[450px]')); ?>
     </div>
