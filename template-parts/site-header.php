@@ -17,9 +17,9 @@
       <a id="logo" href="#" class="inline-block">
         <img src="<?php echo cdmdirect_asset('images/logo-cdm-direct-reverse.svg') ?>" alt="" class="h-32 w-auto">
       </a>
-      <div class="flex justify-end items-center gap-x-6">
-        <div class="main-nav--div flex gap-x-10 items-center shadow-[0_1px_0px_rgba(255,255,255,0.5)]">
-          <ul class="main-nav--ul flex gap-x-12 text-white font-medium uppercase">
+      <div class="flex justify-end items-center gap-x-6 4xl:gap-x-12">
+        <div class="main-nav--div flex gap-x-10 items-center shadow-[0_1px_0px_rgba(255,255,255,0.5)] 4xl:gap-x-14">
+          <ul class="main-nav--ul flex gap-x-12 text-white font-medium uppercase 3xl:gap-x-14 4xl:gap-x-16">
             <li><a href="<?php echo get_site_url() ?>/" class="inline-block whitespace-nowrap py-8 px-3 border-b-4 border-transparent hover:border-brand-orange transition duration-300">Home</a></li>
             <li><a href="<?php echo get_site_url() ?>/our-services" class="inline-block whitespace-nowrap py-8 px-3 border-b-4 border-transparent hover:border-brand-orange transition duration-300">Services</a></li>
             <li><a href="<?php echo get_site_url() ?>/industry" class="inline-block whitespace-nowrap py-8 px-3 border-b-4 border-transparent hover:border-brand-orange transition duration-300">Industry</a></li>
