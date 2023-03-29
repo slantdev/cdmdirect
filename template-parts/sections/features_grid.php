@@ -40,7 +40,7 @@ $description = get_sub_field('description');
     $features = get_sub_field('features_grid')['features'];
     //preint_r($features);
     if ($features) : ?>
-      <div class="container max-w-screen-lg mt-20">
+      <div class="container max-w-screen-xl mt-20">
         <div class="grid grid-cols-3 gap-20">
           <?php foreach ($features as $feature) : ?>
             <?php
