@@ -14,7 +14,7 @@
   </div>
   <div id="main-nav" class="max-w-screen-4xl mx-auto px-4 md:px-6 xl:px-8 py-2 md:py-3 xl:py-6 transition duration-300">
     <div class="flex justify-between items-center">
-      <a id="logo" href="#" class="inline-block">
+      <a id="logo" href="<?php echo get_site_url() ?>" class="inline-block">
         <img src="<?php echo cdmdirect_asset('images/logo-cdm-direct-reverse.svg') ?>" alt="" class="h-32 w-auto">
       </a>
       <div class="flex justify-end items-center gap-x-6 4xl:gap-x-12">
