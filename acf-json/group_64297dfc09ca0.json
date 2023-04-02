@@ -1,9 +1,9 @@
 {
-    "key": "group_6421e5328f82a",
-    "title": "Layout - Resources",
+    "key": "group_64297dfc09ca0",
+    "title": "Layout - Team",
     "fields": [
         {
-            "key": "field_6421e532953c5",
+            "key": "field_64297dfc0f853",
             "label": "Content Settings",
             "name": "",
             "aria-label": "",
@@ -20,7 +20,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_64296f103fe95",
+            "key": "field_64297dfc0f85e",
             "label": "Section Intro",
             "name": "section_intro",
             "aria-label": "",
@@ -38,60 +38,12 @@
             "acfe_group_modal": 0,
             "acfe_settings": "",
             "acfe_permissions": "",
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large",
             "sub_fields": [
                 {
-                    "key": "field_64296f343fe96",
-                    "label": "Image",
-                    "name": "image",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "uploader": "",
-                    "return_format": "array",
-                    "acfe_thumbnail": 0,
-                    "acfe_settings": "",
-                    "acfe_validate": "",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "medium",
-                    "library": "all"
-                },
-                {
-                    "key": "field_64296f3f3fe97",
-                    "label": "Sub Headline",
-                    "name": "sub_headline",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "acfe_settings": "",
-                    "acfe_validate": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_64296f473fe98",
+                    "key": "field_64297dfc11f05",
                     "label": "Headline",
                     "name": "headline",
                     "aria-label": "",
@@ -113,7 +65,7 @@
                     "append": ""
                 },
                 {
-                    "key": "field_64296fd4affab",
+                    "key": "field_64297dfc11f0d",
                     "label": "Description",
                     "name": "description",
                     "aria-label": "",
@@ -135,34 +87,13 @@
                     "rows": 3,
                     "placeholder": "",
                     "new_lines": ""
-                },
-                {
-                    "key": "field_64296f583fe99",
-                    "label": "View All Link",
-                    "name": "view_all_link",
-                    "aria-label": "",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "acfe_settings": "",
-                    "acfe_validate": ""
                 }
-            ],
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large"
+            ]
         },
         {
-            "key": "field_64296d97da8c6",
-            "label": "Resources",
-            "name": "resources",
+            "key": "field_64297dfc0f866",
+            "label": "Team",
+            "name": "team",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -180,9 +111,9 @@
             "acfe_permissions": "",
             "sub_fields": [
                 {
-                    "key": "field_64296da6da8c7",
-                    "label": "Resources Category",
-                    "name": "resources_category",
+                    "key": "field_64297dfc1aaae",
+                    "label": "Team Category",
+                    "name": "team_category",
                     "aria-label": "",
                     "type": "taxonomy",
                     "instructions": "Leave empty to show posts from all category",
@@ -193,7 +124,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "taxonomy": "resources_category",
+                    "taxonomy": "team_category",
                     "add_term": 0,
                     "save_terms": 0,
                     "load_terms": 0,
@@ -209,7 +140,7 @@
                     "multiple": 0
                 },
                 {
-                    "key": "field_64296e53da8cb",
+                    "key": "field_64297dfc1aab9",
                     "label": "Posts Per Page",
                     "name": "posts_per_page",
                     "aria-label": "",
@@ -239,7 +170,7 @@
             "acfe_group_modal_size": "large"
         },
         {
-            "key": "field_6421e532954e7",
+            "key": "field_64297dfc0f86e",
             "label": "Section Settings",
             "name": "",
             "aria-label": "",
@@ -256,7 +187,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_6421e532954f0",
+            "key": "field_64297dfc0f877",
             "label": "Section Settings",
             "name": "section_settings",
             "aria-label": "",
@@ -309,7 +240,7 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1680437623,
+    "modified": 1680440912,
     "acfe_categories": {
         "layout": "Layout"
     }

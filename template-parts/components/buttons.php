@@ -47,6 +47,15 @@ if ($buttons_repeater) {
     switch ($button_style) {
       case "indigo-blue":
         $print_button_class .= ' btn-indigo-blue';
+        $button_bg_color = '';
+        $button_border_color = '';
+        $button_text_color = '';
+        break;
+      case "orange":
+        $print_button_class .= ' btn-orange';
+        $button_bg_color = '';
+        $button_border_color = '';
+        $button_text_color = '';
         break;
       default:
         $print_button_class .= '';

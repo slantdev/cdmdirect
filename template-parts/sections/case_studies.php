@@ -85,9 +85,15 @@ $view_all_link = get_sub_field('view_all_link');
                   <a href="<?php echo $permalink ?>" class="btn btn-primary"><span>Read more</span></a>
                 </div>
                 <div class="w-2/3 pl-24">
-                  <div class="aspect-w-8 aspect-h-6">
-                    <img src='<?php echo $thumbnail ?>' alt='' class="object-cover h-full w-full rounded-tl-[300px] rounded-tr-[300px] rounded-br-[50px] rounded-bl-[300px]" />
-                  </div>
+                  <?php if ($thumbnail) : ?>
+                    <div class="aspect-w-8 aspect-h-6">
+                      <img src='<?php echo $thumbnail ?>' alt='' class="object-cover h-full w-full rounded-tl-[300px] rounded-tr-[300px] rounded-br-[50px] rounded-bl-[300px]" />
+                    </div>
+                  <?php else : ?>
+                    <div class="aspect-w-8 aspect-h-6 bg-slate-100 rounded-tl-[300px] rounded-tr-[300px] rounded-br-[50px] rounded-bl-[300px]">
+                      <div class="h-full w-full"></div>
+                    </div>
+                  <?php endif; ?>
                 </div>
               </div>
             <?php } ?>
