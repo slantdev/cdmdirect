@@ -101,5 +101,4 @@ $view_all_link = $section_intro['view_all_link'];
       ?>
     </div>
   </div>
-  </div>
 </section>

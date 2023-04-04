@@ -717,6 +717,51 @@
                     "acfe_flexible_settings": false,
                     "acfe_flexible_settings_size": "medium",
                     "acfe_flexible_category": false
+                },
+                "layout_642bc2c803d14": {
+                    "key": "layout_642bc2c803d14",
+                    "name": "benefits",
+                    "label": "Benefits",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_642bc2c803d15",
+                            "label": "Benefits",
+                            "name": "benefits",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_642bc29bc1ac8"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_seamless_style": 0,
+                            "acfe_clone_modal": 0,
+                            "acfe_clone_modal_close": 0,
+                            "acfe_clone_modal_button": "",
+                            "acfe_clone_modal_size": "large"
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "medium",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
                 }
             },
             "min": "",
@@ -752,7 +797,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1680588941,
+    "modified": 1680589533,
     "acfe_categories": {
         "flexible-content": "Flexible Content"
     }
