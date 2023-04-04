@@ -59,6 +59,12 @@ if (have_rows('section', $the_id)) :
     elseif (get_row_layout() == 'benefits') :
       get_template_part('template-parts/sections/benefits');
 
+    elseif (get_row_layout() == 'download_lead_gen') :
+      get_template_part('template-parts/sections/download_lead_gen');
+
+    elseif (get_row_layout() == 'contact_form_1') :
+      get_template_part('template-parts/sections/contact_form_1');
+
     endif;
 
   // End loop.
