@@ -65,6 +65,9 @@ if (have_rows('section', $the_id)) :
     elseif (get_row_layout() == 'contact_form_1') :
       get_template_part('template-parts/sections/contact_form_1');
 
+    elseif (get_row_layout() == 'resources_grid') :
+      get_template_part('template-parts/sections/resources_grid');
+
     endif;
 
   // End loop.
