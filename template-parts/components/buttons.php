@@ -57,6 +57,13 @@ if ($buttons_repeater) {
         $button_border_color = '';
         $button_text_color = '';
         break;
+
+      case "white":
+        $print_button_class .= ' btn-white';
+        $button_bg_color = '';
+        $button_border_color = '';
+        $button_text_color = '#002F56';
+        break;
       default:
         $print_button_class .= '';
     }
