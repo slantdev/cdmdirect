@@ -1,3 +1,9 @@
+<?php
+$about = get_field('about', 'option');
+$contact_info = get_field('contact_info', 'option');
+$footer_links = get_field('footer_links', 'option');
+?>
+
 <footer class="bg-brand-graylight py-28">
   <div class="container max-w-screen-xl">
     <div class="bg-brand-bluedark rounded-xl p-10">
@@ -16,63 +22,55 @@
         <div class="">
           <img src="<?php echo cdmdirect_asset('images/logo-cdm-direct.svg') ?>" alt="" class="h-32 w-auto">
         </div>
-        <div class="my-6 font-nunito text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
+        <?php if ($about['about_company']) : ?>
+          <div class="my-6 font-nunito text-lg">
+            <?php echo $about['about_company'] ?>
+          </div>
+        <?php endif; ?>
         <div class="w-20 h-0.5 bg-[#D8D8D8] my-6"></div>
-        <div class="text-gray-500">
-          &copy; <?php echo date_i18n('Y'); ?> <strong>Powered</strong> by <a href="#" class="text-brand-blue hover:underline">Slant Digital</a>
-        </div>
+        <?php if ($about['copyright_info']) : ?>
+          <div class="text-gray-500">
+            <?php echo $about['copyright_info'] ?>
+          </div>
+        <?php endif; ?>
       </div>
       <div class="w-2/3">
         <div class="flex gap-x-12">
           <div class="grow">
-            <h5 class="font-bold text-xl leading-tight text-brand-bluedark my-8">Contact Info</h5>
-            <div class="flex flex-col gap-y-6">
-              <div class="flex gap-x-5">
-                <div class="flex-none">
-                  <img class="w-8 h-8" src="<?php echo cdmdirect_asset('images/flags/au.png') ?>" alt="">
-                </div>
-                <div class="">
-                  <h6 class="text-lg font-semibold text-brand-bluedark mb-1">SYDNEY</h6>
-                  <div>Suite 1<br />
-                    345 Pacific Highway<br />
-                    North Sydney, 2060 NSW</div>
-                </div>
+            <?php if ($contact_info) : ?>
+              <h5 class="font-bold text-xl leading-tight text-brand-bluedark my-8">Contact Info</h5>
+              <div class="flex flex-col gap-y-6">
+                <?php foreach ($contact_info as $contact) : ?>
+                  <div class="flex gap-x-5">
+                    <div class="flex-none">
+                      <?php if ($contact['country'] == 'au') {
+                        echo '<img class="w-8 h-8" src="' . cdmdirect_asset('images/flags/au.png') . '" alt="">';
+                      } else if ($contact['country'] == 'nz') {
+                        echo '<img class="w-8 h-8" src="' . cdmdirect_asset('images/flags/au.png') . '" alt="">';
+                      } ?>
+                    </div>
+                    <div class="">
+                      <?php if ($contact['heading']) : ?>
+                        <h6 class="text-lg font-semibold text-brand-bluedark mb-1"><?php echo $contact['heading'] ?></h6>
+                      <?php endif; ?>
+                      <?php if ($contact['address']) : ?>
+                        <div><?php echo $contact['address'] ?></div>
+                    </div>
+                  <?php endif; ?>
+                  </div>
+                <?php endforeach; ?>
               </div>
-              <div class="flex gap-x-5">
-                <div class="flex-none">
-                  <img class="w-8 h-8" src="<?php echo cdmdirect_asset('images/flags/au.png') ?>" alt="">
-                </div>
-                <div class="">
-                  <h6 class="text-lg font-semibold text-brand-bluedark">MELBOURNE</h6>
-                  <div>83B Hartnett Drive<br />
-                    Seaford, VIC, 3198</div>
-                </div>
-              </div>
-              <div class="flex gap-x-5">
-                <div class="flex-none">
-                  <img class="w-8 h-8" src="<?php echo cdmdirect_asset('images/flags/au.png') ?>" alt="">
-                </div>
-                <div class="">
-                  <h6 class="text-lg font-semibold text-brand-bluedark">AUCKLAND</h6>
-                  <div>Level 5<br />
-                    210 Khyber Pass Road<br />
-                    Grafton, Auckland, 1023 NZ</div>
-                </div>
-              </div>
-            </div>
+            <?php endif; ?>
           </div>
           <div class="grow">
-            <h5 class="font-bold text-xl leading-tight text-brand-bluedark my-8">Links</h5>
-            <ul class="gap-x-8 columns-2 text-lg">
-              <li class="pb-2"><a href="#" class="text-brand-bluedark hover:underline">Home</a></li>
-              <li class="pb-2"><a href="#" class="text-brand-bluedark hover:underline">Our services</a></li>
-              <li class="pb-2"><a href="#" class="text-brand-bluedark hover:underline">Industries</a></li>
-              <li class="pb-2"><a href="#" class="text-brand-bluedark hover:underline">Resources</a></li>
-              <li class="pb-2"><a href="#" class="text-brand-bluedark hover:underline">About Us</a></li>
-              <li class="pb-2"><a href="#" class="text-brand-bluedark hover:underline">Contact</a></li>
-            </ul>
+            <?php if ($footer_links) : ?>
+              <h5 class="font-bold text-xl leading-tight text-brand-bluedark my-8">Links</h5>
+              <ul class="gap-x-8 columns-2 text-lg">
+                <?php foreach ($footer_links as $link) : ?>
+                  <li class="pb-2"><a href="<?php echo $link['link']['url'] ?>" class="text-brand-bluedark hover:underline"><?php echo $link['link']['title'] ?></a></li>
+                <?php endforeach; ?>
+              </ul>
+            <?php endif; ?>
           </div>
         </div>
       </div>
