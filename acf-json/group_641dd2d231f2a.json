@@ -628,6 +628,51 @@
                     "acfe_flexible_settings_size": "medium",
                     "acfe_flexible_category": false
                 },
+                "layout_642bc073cfc52": {
+                    "key": "layout_642bc073cfc52",
+                    "name": "cta_2",
+                    "label": "CTA 2",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_642bc073cfc53",
+                            "label": "CTA 2",
+                            "name": "cta_2",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_642bc02278b20"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_seamless_style": 0,
+                            "acfe_clone_modal": 0,
+                            "acfe_clone_modal_close": 0,
+                            "acfe_clone_modal_button": "",
+                            "acfe_clone_modal_size": "large"
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "medium",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
                 "layout_64297e67e41c5": {
                     "key": "layout_64297e67e41c5",
                     "name": "team",
@@ -707,7 +752,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1680440957,
+    "modified": 1680588941,
     "acfe_categories": {
         "flexible-content": "Flexible Content"
     }

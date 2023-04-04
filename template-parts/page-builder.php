@@ -50,6 +50,9 @@ if (have_rows('section', $the_id)) :
     elseif (get_row_layout() == 'cta') :
       get_template_part('template-parts/sections/cta');
 
+    elseif (get_row_layout() == 'cta_2') :
+      get_template_part('template-parts/sections/cta_2');
+
     elseif (get_row_layout() == 'team') :
       get_template_part('template-parts/sections/team');
 
