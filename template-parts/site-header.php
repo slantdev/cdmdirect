@@ -103,7 +103,7 @@
                                         <div id="<?php echo $article_id; ?>" class="menu-article" tabindex="-1">
                                           <div class="flex flex-col gap-y-4">
                                             <a href="<?php echo $permalink ?>" class="block">
-                                              <div class="aspect-w-16 aspect-h-6">
+                                              <div class="aspect-w-16 aspect-h-8">
                                                 <img src="<?php echo $thumbnail ?>" alt="<?php echo $title ?>" class="object-cover h-full w-full rounded-xl" />
                                               </div>
                                             </a>

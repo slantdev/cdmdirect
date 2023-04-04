@@ -45,7 +45,7 @@
 }
 
 .menu-has-article {
-  @apply block py-2 relative;
+  @apply block py-1.5 relative;
   > .svg-icon {
     @apply invisible opacity-0 transition duration-300;
   }

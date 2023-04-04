@@ -69,7 +69,7 @@ $description = $section_intro['description'];
 
         echo '<label for="team-' . $theID . '" class="block py-12 p-16 bg-white border-l border-t border-[#D0D0D0] cursor-pointer">';
         if ($photo) {
-          echo '<div class="mb-5 text-center"><img src="' . $photo['url'] . '" alt="' . $full_name . '" class="rounded-full mx-auto max-w-[240px]" /></div>';
+          echo '<div class="mb-5 text-center"><div class="aspect-w-1 aspect-h-1 mx-auto max-w-[240px]"><img src="' . $photo['url'] . '" alt="' . $full_name . '" class="rounded-full object-cover w-full h-full" /></div></div>';
         }
         echo '<div class="relative pr-6">';
         if ($full_name) {
