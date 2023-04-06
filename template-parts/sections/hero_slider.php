@@ -50,6 +50,10 @@ if ($hero_slider) : ?>
                       <?php echo $description; ?>
                     </div>
                   <?php endif; ?>
+                  <?php
+                  //preint_r($buttons);
+                  ?>
+                  <?php get_template_part('template-parts/components/buttons', '', array('field' => $buttons, 'class' => 'mt-6 xl:mt-12')); ?>
                 </div>
               </div>
             </div>

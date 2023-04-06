@@ -2,7 +2,11 @@
 $field = $args['field'];
 $class = $args['class'];
 if ($field) {
-  $buttons = get_sub_field($field);
+  if (is_array($field)) {
+    $buttons = $field;
+  } else {
+    $buttons = get_sub_field($field);
+  }
 } else {
   $buttons = get_sub_field('buttons');
 }
