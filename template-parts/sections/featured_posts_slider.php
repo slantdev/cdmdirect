@@ -37,11 +37,12 @@ if ($featured_posts_slider) : ?>
                   <?php
                   $post_title = $post['post']->post_title;
                   $excerpt = $post['excerpt'];
+                  $permalink = get_the_permalink($post['post']->ID);
                   ?>
                   <div class="swiper-slide">
                     <div class="flex gap-x-6">
                       <div class="w-2/3">
-                        <h3 class="font-bold text-[34px] leading-tight"><?php echo $post_title ?></h3>
+                        <h3 class="font-bold text-[34px] leading-tight"><a href="<?php echo $permalink ?>" class="hover:underline"><?php echo $post_title ?></a></h3>
                       </div>
                       <div class="w-1/3">
                         <?php if ($excerpt) : ?>
