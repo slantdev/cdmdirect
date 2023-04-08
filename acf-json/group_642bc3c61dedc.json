@@ -62,38 +62,32 @@
             "acfe_validate": "",
             "maxlength": "",
             "acfe_permissions": "",
-            "rows": "",
+            "rows": 3,
             "placeholder": "",
             "new_lines": ""
         },
         {
-            "key": "field_642bc3c62441f",
-            "label": "Button",
-            "name": "button",
+            "key": "field_6431993f98ef6",
+            "label": "Form Shortcode",
+            "name": "form_shortcode",
             "aria-label": "",
-            "type": "clone",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "label-hidden",
+                "class": "",
                 "id": ""
             },
-            "clone": [
-                "group_632914a078980"
-            ],
-            "display": "group",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0,
-            "acfe_seamless_style": 0,
-            "acfe_clone_modal": 0,
+            "default_value": "",
             "acfe_settings": "",
+            "acfe_validate": "",
+            "maxlength": "",
             "acfe_permissions": "",
-            "acfe_clone_modal_close": 0,
-            "acfe_clone_modal_button": "",
-            "acfe_clone_modal_size": "large"
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_642bc3c624428",
@@ -166,7 +160,7 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1680589787,
+    "modified": 1680972538,
     "acfe_categories": {
         "layout": "Layout"
     }

@@ -1,15 +1,36 @@
 <header class="site-header fixed w-full top-0 left-0 right-0 z-30">
   <div id="top-nav" class="bg-brand-blue text-white">
     <div class="top-nav--container max-w-screen-4xl mx-auto px-4 py-2 md:px-6 xl:px-8">
-      <div class="flex justify-end">
-        <ul class="top-nav--ul flex gap-x-4">
-          <li><a href="#"><?php echo cdmdirect_icon(array('icon' => 'twitter', 'group' => 'social', 'size' => '24', 'class' => '')); ?></a></li>
-          <li><a href="#"><?php echo cdmdirect_icon(array('icon' => 'facebook', 'group' => 'social', 'size' => '24', 'class' => '')); ?></a></li>
-          <li><a href="#"><?php echo cdmdirect_icon(array('icon' => 'linkedin', 'group' => 'social', 'size' => '24', 'class' => '')); ?></a></li>
-          <li><a href="#"><?php echo cdmdirect_icon(array('icon' => 'mail', 'group' => 'utilities', 'size' => '24', 'class' => '')); ?></a></li>
-          <li><a href="#"><?php echo cdmdirect_icon(array('icon' => 'phone', 'group' => 'utilities', 'size' => '24', 'class' => '')); ?></a></li>
-        </ul>
-      </div>
+      <?php
+      $links = get_field('links', 'option');
+      $twitter = $links['twitter'];
+      $facebook = $links['facebook'];
+      $linkedin = $links['linkedin'];
+      $youtube = $links['youtube'];
+      $email = $links['email'];
+      $phone = $links['phone'];
+      if ($links) :
+      ?>
+        <div class="flex justify-end">
+          <ul class="top-nav--ul flex gap-x-4">
+            <?php if ($twitter) : ?>
+              <li><a href="<?php echo $twitter['url'] ?>" target="<?php echo $twitter['target'] ?>"><?php echo cdmdirect_icon(array('icon' => 'twitter', 'group' => 'social', 'size' => '24', 'class' => '')); ?></a></li>
+            <?php endif; ?>
+            <?php if ($facebook) : ?>
+              <li><a href="<?php echo $facebook['url'] ?>" target="<?php echo $facebook['target'] ?>"><?php echo cdmdirect_icon(array('icon' => 'facebook', 'group' => 'social', 'size' => '24', 'class' => '')); ?></a></li>
+            <?php endif; ?>
+            <?php if ($linkedin) : ?>
+              <li><a href="<?php echo $linkedin['url'] ?>" target="<?php echo $linkedin['target'] ?>"><?php echo cdmdirect_icon(array('icon' => 'linkedin', 'group' => 'social', 'size' => '24', 'class' => '')); ?></a></li>
+            <?php endif; ?>
+            <?php if ($email) : ?>
+              <li><a href="<?php echo $email['url'] ?>" target="<?php echo $email['target'] ?>"><?php echo cdmdirect_icon(array('icon' => 'mail', 'group' => 'utilities', 'size' => '24', 'class' => '')); ?></a></li>
+            <?php endif; ?>
+            <?php if ($phone) : ?>
+              <li><a href="<?php echo $phone['url'] ?>" target="<?php echo $phone['target'] ?>"><?php echo cdmdirect_icon(array('icon' => 'phone', 'group' => 'utilities', 'size' => '24', 'class' => '')); ?></a></li>
+            <?php endif; ?>
+          </ul>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
   <div id="main-nav" class="py-2 md:py-3 xl:py-6 transition duration-300">
@@ -130,96 +151,20 @@
                 <?php endforeach; ?>
               </ul>
             <?php endif; ?>
-            <a href="#" class="flex px-6 py-3 gap-x-4 text-white font-medium border border-solid border-white rounded-full bg-transparent hover:bg-brand-orange hover:border-brand-orange transition duration-200">
-              <?php echo cdmdirect_icon(array('icon' => 'phone', 'group' => 'utilities', 'size' => '24', 'class' => 'text-white')); ?>
-              <span>1800 221 811</span>
-            </a>
+            <?php
+            $links = get_field('links', 'option');
+            $phone = $links['phone'];
+            if ($phone) :
+            ?>
+              <a href="<?php echo $phone['url'] ?>" target="<?php echo $phone['target'] ?>" class="flex px-6 py-3 gap-x-4 text-white font-medium border border-solid border-white rounded-full bg-transparent hover:bg-brand-orange hover:border-brand-orange transition duration-200">
+                <?php echo cdmdirect_icon(array('icon' => 'phone', 'group' => 'utilities', 'size' => '24', 'class' => 'text-white')); ?>
+                <span><?php echo $phone['title'] ?></span>
+              </a>
+            <?php endif; ?>
           </div>
           <div><button class="p-4 rounded-full bg-brand-yellow"><?php echo cdmdirect_icon(array('icon' => 'search', 'group' => 'utilities', 'size' => '24', 'class' => 'text-white')); ?></button></div>
         </div>
       </div>
     </div>
   </div>
-  <!-- <div id="mega-menu" class="transition duration-300 py-12 text-white min-h-[460px]" tabindex="0">
-    <div class="container max-w-screen-xl mx-auto">
-      <div class="flex gap-x-12 divide-x divide-white/30">
-        <div class="w-1/4">
-          <h4 class="text-[34px] font-semibold text-brand-blue">Services</h4>
-          <div class="mt-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </div>
-        </div>
-        <div class="w-3/4 pl-12">
-          <div class="flex gap-x-12">
-            <div class="w-2/5">
-              <ul class="flex flex-col divide-y divide-white/30 text-lg">
-                <li>
-                  <a href="#" class="menu-has-article" data-target="article-0201">
-                    <span>Outsourcing</span>
-                    <?php echo cdmdirect_icon(array('icon' => 'chevron', 'group' => 'utilities', 'size' => '18', 'class' => 'text-brand-orange absolute right-0 top-4')); ?>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="menu-has-article" data-target="article-0202">
-                    <span>Outsourcing</span>
-                    <?php echo cdmdirect_icon(array('icon' => 'chevron', 'group' => 'utilities', 'size' => '18', 'class' => 'text-brand-orange absolute right-0 top-4')); ?>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="menu-has-article" data-target="article-0203">
-                    <span>Outsourcing</span>
-                    <?php echo cdmdirect_icon(array('icon' => 'chevron', 'group' => 'utilities', 'size' => '18', 'class' => 'text-brand-orange absolute right-0 top-4')); ?>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="menu-has-article" data-target="article-0204">
-                    <span>Outsourcing</span>
-                    <?php echo cdmdirect_icon(array('icon' => 'chevron', 'group' => 'utilities', 'size' => '18', 'class' => 'text-brand-orange absolute right-0 top-4')); ?>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="menu-has-article" data-target="article-0205">
-                    <span>Outsourcing</span>
-                    <?php echo cdmdirect_icon(array('icon' => 'chevron', 'group' => 'utilities', 'size' => '18', 'class' => 'text-brand-orange absolute right-0 top-4')); ?>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="menu-has-article" data-target="article-0206">
-                    <span>Outsourcing</span>
-                    <?php echo cdmdirect_icon(array('icon' => 'chevron', 'group' => 'utilities', 'size' => '18', 'class' => 'text-brand-orange absolute right-0 top-4')); ?>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="w-3/5 relative">
-              <div id="article-0201" class="menu-article">
-                <a href="#" class="block">
-                  <div class="aspect-w-16 aspect-h-6">
-                    <img src='https://source.unsplash.com/3WAMh1omVAY/1600x900' alt='' class="object-cover h-full w-full rounded-xl" />
-                  </div>
-                </a>
-                <h2 class="text-[28px] font-bold text-brand-blue"><a href="#" class="hover:underline">Outsourcing solution for a Medical business</a></h2>
-                <p class="text-lg line-clamp-2">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-                </p>
-                <a href="#" class="text-lg font-semibold text-brand-orange hover:underline">Learn More &raquo;</a>
-              </div>
-              <div id="article-0202" class="menu-article">
-                <a href="#" class="block">
-                  <div class="aspect-w-16 aspect-h-6">
-                    <img src='https://source.unsplash.com/3WAMh1omVAY/1600x900' alt='' class="object-cover h-full w-full rounded-xl" />
-                  </div>
-                </a>
-                <h2 class="text-[28px] font-bold text-brand-blue"><a href="#" class="hover:underline">2Outsourcing solution for a Medical business</a></h2>
-                <p class="text-lg line-clamp-2">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-                </p>
-                <a href="#" class="text-lg font-semibold text-brand-orange hover:underline">Learn More &raquo;</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 </header>

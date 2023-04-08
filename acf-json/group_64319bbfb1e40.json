@@ -1,9 +1,9 @@
 {
-    "key": "group_642bc40f8b8c3",
-    "title": "Layout - Contact Form 1",
+    "key": "group_64319bbfb1e40",
+    "title": "Layout - Contact Form 2",
     "fields": [
         {
-            "key": "field_642bc40f919c1",
+            "key": "field_64319bbfb96f9",
             "label": "Content Settings",
             "name": "",
             "aria-label": "",
@@ -20,7 +20,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_642bc40f919cc",
+            "key": "field_64319bbfb9713",
             "label": "Headline",
             "name": "headline",
             "aria-label": "",
@@ -43,11 +43,11 @@
             "append": ""
         },
         {
-            "key": "field_642bc40f919d5",
+            "key": "field_64319bbfb9728",
             "label": "Description",
             "name": "description",
             "aria-label": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -57,17 +57,16 @@
                 "id": ""
             },
             "default_value": "",
-            "acfe_textarea_code": 0,
             "acfe_settings": "",
             "acfe_validate": "",
-            "maxlength": "",
             "acfe_permissions": "",
-            "rows": 3,
-            "placeholder": "",
-            "new_lines": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "key": "field_64319ac539157",
+            "key": "field_64319bbfb973c",
             "label": "Form Shortcode",
             "name": "form_shortcode",
             "aria-label": "",
@@ -90,7 +89,7 @@
             "append": ""
         },
         {
-            "key": "field_642bc40f919f3",
+            "key": "field_64319bbfb9746",
             "label": "Section Settings",
             "name": "",
             "aria-label": "",
@@ -107,7 +106,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_642bc40f91a10",
+            "key": "field_64319bbfb974f",
             "label": "Section Settings",
             "name": "section_settings",
             "aria-label": "",
@@ -160,7 +159,7 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1680972544,
+    "modified": 1680973032,
     "acfe_categories": {
         "layout": "Layout"
     }
