@@ -20,6 +20,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_64314c4415ff2",
+            "label": "Section Intro",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0,
+            "acfe_permissions": ""
+        },
+        {
             "key": "field_642bc29bca383",
             "label": "Section Intro",
             "name": "section_intro",
@@ -33,14 +52,11 @@
                 "class": "label-hidden",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "row",
             "acfe_seamless_style": 0,
             "acfe_group_modal": 0,
             "acfe_settings": "",
             "acfe_permissions": "",
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large",
             "sub_fields": [
                 {
                     "key": "field_642bc29bcfe1c",
@@ -70,28 +86,6 @@
                     "mime_types": "",
                     "preview_size": "medium",
                     "library": "all"
-                },
-                {
-                    "key": "field_642bc29bcfe27",
-                    "label": "Sub Headline",
-                    "name": "sub_headline",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "acfe_settings": "",
-                    "acfe_validate": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
                 },
                 {
                     "key": "field_642bc29bcfe30",
@@ -140,11 +134,11 @@
                     "new_lines": ""
                 },
                 {
-                    "key": "field_642bc29bcfe68",
-                    "label": "View All Link",
-                    "name": "view_all_link",
+                    "key": "field_6431491bb61dc",
+                    "label": "Industry Application",
+                    "name": "industry_application",
                     "aria-label": "",
-                    "type": "link",
+                    "type": "post_object",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -153,18 +147,54 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": "",
+                    "return_format": "object",
+                    "multiple": 1,
+                    "save_custom": 0,
+                    "save_post_status": "publish",
+                    "acfe_bidirectional": {
+                        "acfe_bidirectional_enabled": "0"
+                    },
                     "acfe_settings": "",
-                    "acfe_validate": ""
+                    "acfe_validate": "",
+                    "allow_null": 0,
+                    "acfe_permissions": "",
+                    "ui": 1,
+                    "save_post_type": ""
                 }
-            ]
+            ],
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_64314c5415ff3",
+            "label": "Benefits Cards",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0,
+            "acfe_permissions": ""
         },
         {
             "key": "field_642bc29bca38c",
-            "label": "Resources",
-            "name": "resources",
+            "label": "Benefits Card",
+            "name": "benefits_card",
             "aria-label": "",
-            "type": "group",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -173,70 +203,86 @@
                 "class": "label-hidden",
                 "id": ""
             },
-            "layout": "block",
-            "acfe_seamless_style": 0,
-            "acfe_group_modal": 0,
+            "acfe_repeater_stylised_button": 1,
+            "layout": "row",
+            "pagination": 0,
             "acfe_settings": "",
+            "min": 0,
+            "max": 0,
             "acfe_permissions": "",
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large",
+            "collapsed": "field_64314b92efb78",
+            "button_label": "Add Card",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_642bc29bdd2cd",
-                    "label": "Resources Category",
-                    "name": "resources_category",
+                    "key": "field_64314b92efb78",
+                    "label": "Card Title",
+                    "name": "card_title",
                     "aria-label": "",
-                    "type": "taxonomy",
-                    "instructions": "Leave empty to show posts from all category",
+                    "type": "text",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "66.67",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "resources_category",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "id",
-                    "field_type": "multi_select",
-                    "allow_null": 1,
-                    "acfe_bidirectional": {
-                        "acfe_bidirectional_enabled": "0"
-                    },
-                    "acfe_settings": "",
-                    "acfe_validate": "",
-                    "acfe_permissions": "",
-                    "multiple": 0
-                },
-                {
-                    "key": "field_642bc29bdd2d8",
-                    "label": "Posts Per Page",
-                    "name": "posts_per_page",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "Show how many posts in grid",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33.33",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
                     "acfe_settings": "",
                     "acfe_validate": "",
-                    "min": "",
-                    "max": "",
+                    "maxlength": "",
                     "acfe_permissions": "",
                     "placeholder": "",
-                    "step": "",
                     "prepend": "",
-                    "append": ""
+                    "append": "",
+                    "parent_repeater": "field_642bc29bca38c"
+                },
+                {
+                    "key": "field_64314bb4efb79",
+                    "label": "Card Description",
+                    "name": "card_description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "acfe_textarea_code": 0,
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "maxlength": "",
+                    "acfe_permissions": "",
+                    "rows": 3,
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_642bc29bca38c"
                 }
             ]
+        },
+        {
+            "key": "field_64314c84a546d",
+            "label": "Accordion End Point",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1,
+            "acfe_permissions": ""
         },
         {
             "key": "field_642bc29bca3ad",
@@ -309,7 +355,7 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1680589502,
+    "modified": 1680952469,
     "acfe_categories": {
         "layout": "Layout"
     }

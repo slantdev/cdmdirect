@@ -10,10 +10,10 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
 
 $section_intro = get_sub_field('section_intro');
 $image = $section_intro['image'];
-$sub_headline = $section_intro['sub_headline'];
 $headline = $section_intro['headline'];
 $description = $section_intro['description'];
-$view_all_link = $section_intro['view_all_link'];
+$industry_application = $section_intro['industry_application'];
+$benefits_card = get_sub_field('benefits_card');
 ?>
 
 <section id="<?php echo $section_id ?>" style="<?php echo $section_style ?>">
@@ -23,65 +23,54 @@ $view_all_link = $section_intro['view_all_link'];
         <div class="flex gap-x-16">
           <div class="w-2/5">
             <div class="absolute left-0 right-[60%] h-full">
-              <img src='https://source.unsplash.com/MFSEP2g4YS0/1600x900' alt='' class="object-cover h-full w-full rounded-r-[300px]" />
+              <?php if ($image) : ?>
+                <img src='<?php echo $image['url'] ?>' alt='<?php echo $image['alt'] ?>' class="object-cover h-full w-full rounded-r-[300px]" />
+              <?php else : ?>
+                <div class="h-full w-full rounded-r-[300px] bg-slate-100"></div>
+              <?php endif; ?>
             </div>
           </div>
           <div class="w-3/5 order-2">
-            <h3 class="text-[34px] leading-tight font-bold text-brand-blue mt-6 mb-6">Outsourcing services to CDM Direct will expose you to the below benefits</h3>
-            <p class="text-lg mb-12 font-nunito">
-              As a strategic & smart business idea, outsourcing has gained much popularity in the last decade, purely due to businesses wanting to reap the benefits from outsourcing while they engage their in-house resources on more important things.
-            </p>
-            <div class="mt-12">
-              <h4 class="uppercase text-brand-bluedark text-lg mb-4">Industry Application</h4>
-              <div class="flex gap-x-6">
-                <a href="#" class="py-3 px-8 rounded-full shadow-md font-bold border border-slate-300 text-brand-bluedark bg-[#EDF1F5]">Medical</a>
-                <a href="#" class="py-3 px-8 rounded-full shadow-md font-bold border border-slate-300 text-brand-bluedark bg-[#EDF1F5]">Banking</a>
-                <a href="#" class="py-3 px-8 rounded-full shadow-md font-bold border border-slate-300 text-brand-bluedark bg-[#EDF1F5]">Automotive</a>
-                <a href="#" class="py-3 px-8 rounded-full shadow-md font-bold border border-slate-300 text-brand-bluedark bg-[#EDF1F5]">Retail</a>
+            <?php if ($headline) : ?>
+              <h3 class="text-[34px] leading-tight font-bold text-brand-blue mt-6 mb-6"><?php echo $headline; ?></h3>
+            <?php endif; ?>
+            <?php if ($description) : ?>
+              <div class="text-lg mb-12 font-nunito">
+                <?php echo $description; ?>
               </div>
-            </div>
+            <?php endif; ?>
+            <?php if ($industry_application) : ?>
+              <div class="mt-12">
+                <h4 class="uppercase text-brand-bluedark text-lg mb-4">Industry Application</h4>
+                <div class="flex gap-6">
+                  <?php foreach ($industry_application as $industry) : ?>
+                    <a href="<?php echo get_the_permalink($industry->ID) ?>" class="py-3 px-8 rounded-full shadow-md font-bold border border-slate-300 text-brand-bluedark bg-[#EDF1F5] hover:shadow-lg hover:bg-brand-blue hover:text-white hover:border-brand-blue transition duration-300"><?php echo $industry->post_title ?></a>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+            <?php endif; ?>
           </div>
         </div>
       </div>
     </div>
-    <div class="container max-w-screen-xl mt-24">
-      <div class="grid grid-cols-2 gap-8">
-        <div class="block bg-[#F7F9FA] rounded-lg p-10 border shadow-[0_0_20px_rgb(225,228,237,1)]">
-          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-brand-yellow font-bold text-white text-2xl">1</div>
-          <h5 class="text-slate-800 font-normal text-2xl mt-8 mb-6">Getting access to skilled expertise</h5>
-          <p class="font-nunito text-lg">
-            One of the primary reasons why businesses outsource tasks is due to them requiring skilled expertise. The staff here at CDM Direct have years of contact centre experience behind them, who will ensure the tasks you need completed, are completed with the highest level of satisfaction.
-          </p>
-        </div>
-        <div class="block bg-[#F7F9FA] rounded-lg p-10 border shadow-[0_0_20px_rgb(225,228,237,1)]">
-          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-brand-yellow font-bold text-white text-2xl">1</div>
-          <h5 class="text-slate-800 font-normal text-2xl mt-8 mb-6">Getting access to skilled expertise</h5>
-          <p class="font-nunito text-lg">
-            One of the primary reasons why businesses outsource tasks is due to them requiring skilled expertise. The staff here at CDM Direct have years of contact centre experience behind them, who will ensure the tasks you need completed, are completed with the highest level of satisfaction.
-          </p>
-        </div>
-        <div class="block bg-[#F7F9FA] rounded-lg p-10 border shadow-[0_0_20px_rgb(225,228,237,1)]">
-          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-brand-yellow font-bold text-white text-2xl">1</div>
-          <h5 class="text-slate-800 font-normal text-2xl mt-8 mb-6">Getting access to skilled expertise</h5>
-          <p class="font-nunito text-lg">
-            One of the primary reasons why businesses outsource tasks is due to them requiring skilled expertise. The staff here at CDM Direct have years of contact centre experience behind them, who will ensure the tasks you need completed, are completed with the highest level of satisfaction.
-          </p>
-        </div>
-        <div class="block bg-[#F7F9FA] rounded-lg p-10 border shadow-[0_0_20px_rgb(225,228,237,1)]">
-          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-brand-yellow font-bold text-white text-2xl">1</div>
-          <h5 class="text-slate-800 font-normal text-2xl mt-8 mb-6">Getting access to skilled expertise</h5>
-          <p class="font-nunito text-lg">
-            One of the primary reasons why businesses outsource tasks is due to them requiring skilled expertise. The staff here at CDM Direct have years of contact centre experience behind them, who will ensure the tasks you need completed, are completed with the highest level of satisfaction.
-          </p>
-        </div>
-        <div class="block bg-[#F7F9FA] rounded-lg p-10 border shadow-[0_0_20px_rgb(225,228,237,1)]">
-          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-brand-yellow font-bold text-white text-2xl">1</div>
-          <h5 class="text-slate-800 font-normal text-2xl mt-8 mb-6">Getting access to skilled expertise</h5>
-          <p class="font-nunito text-lg">
-            One of the primary reasons why businesses outsource tasks is due to them requiring skilled expertise. The staff here at CDM Direct have years of contact centre experience behind them, who will ensure the tasks you need completed, are completed with the highest level of satisfaction.
-          </p>
+    <?php if ($benefits_card) : ?>
+      <div class="container max-w-screen-xl mt-24">
+        <div class="grid grid-cols-2 gap-8">
+          <?php foreach ($benefits_card as $num => $card) : ?>
+            <div class="block bg-[#F7F9FA] rounded-lg p-10 border shadow-[0_0_20px_rgb(225,228,237,1)]">
+              <div class="w-14 h-14 flex items-center justify-center rounded-full bg-brand-yellow font-bold text-white text-2xl"><?php echo $num + 1 ?></div>
+              <?php if ($card['card_title']) : ?>
+                <h5 class="text-slate-800 font-normal text-2xl mt-8 mb-6"><?php echo $card['card_title'] ?></h5>
+              <?php endif; ?>
+              <?php if ($card['card_description']) : ?>
+                <div class="font-nunito text-lg">
+                  <?php echo $card['card_description'] ?>
+                </div>
+              <?php endif; ?>
+            </div>
+          <?php endforeach; ?>
         </div>
       </div>
-    </div>
+    <?php endif; ?>
   </div>
 </section>
