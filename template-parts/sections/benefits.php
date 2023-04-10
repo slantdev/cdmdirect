@@ -44,7 +44,7 @@ $benefits_card = get_sub_field('benefits_card');
                 <h4 class="uppercase text-brand-bluedark text-lg mb-4">Industry Application</h4>
                 <div class="flex gap-6">
                   <?php foreach ($industry_application as $industry) : ?>
-                    <a href="<?php echo get_the_permalink($industry->ID) ?>" class="py-3 px-8 rounded-full shadow-md font-bold border border-slate-300 text-brand-bluedark bg-[#EDF1F5] hover:shadow-lg hover:bg-brand-blue hover:text-white hover:border-brand-blue transition duration-300"><?php echo $industry->post_title ?></a>
+                    <a href="<?php echo get_term_link($industry) ?>" class="py-3 px-8 rounded-full shadow-md font-bold border border-slate-300 text-brand-bluedark bg-[#EDF1F5] hover:shadow-lg hover:bg-brand-blue hover:text-white hover:border-brand-blue transition duration-300"><?php echo $industry->name ?></a>
                   <?php endforeach; ?>
                 </div>
               </div>
