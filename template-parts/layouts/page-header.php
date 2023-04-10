@@ -2,6 +2,13 @@
 /*
  * Page Settings
  */
+$term_id = get_queried_object()->term_id;
+if ($term_id) {
+  $the_id = 'term_' . $term_id;
+} else {
+  $the_id = get_the_ID();
+}
+
 $breadcrumbs = $args['breadcrumbs'];
 if ($breadcrumbs !== true) {
   $breadcrumbs = false;
@@ -10,10 +17,10 @@ if ($breadcrumbs !== true) {
 }
 
 //echo $args['breadcrumbs'];
-$enabled = get_field('enable_page_header');
+$enabled = get_field('enable_page_header', $the_id);
 
 if ($enabled) :
-  $page_header = get_field('page_header');
+  $page_header = get_field('page_header', $the_id);
   $hero_title = $page_header['hero_title'];
   $hero_text = $page_header['hero_text'];
   $hero_background = $page_header['hero_background'];
@@ -28,7 +35,11 @@ if ($enabled) :
   $button_text_color = $cta_button['button_text_color'];
 
   if (!$hero_title) {
-    $hero_title = get_the_title();
+    if (is_tax()) {
+      $hero_title = get_term($the_id)->name;
+    } else {
+      $hero_title = get_the_title();
+    }
   }
 
   $hero_bg_style = '';
