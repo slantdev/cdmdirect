@@ -75,3 +75,118 @@
     }
   }
 }
+
+.resources-filter--button-next,
+.resources-filter--button-prev {
+  @apply absolute top-2 lg:top-[12px] w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center bg-white rounded-full shadow-md hover:bg-brand-blue text-gray-500 hover:text-white cursor-pointer transition-all duration-200;
+  &.swiper-button-disabled {
+    @apply opacity-30 hover:bg-white hover:text-gray-500 cursor-default;
+  }
+  &.swiper-button-lock {
+    @apply invisible;
+  }
+}
+
+#resources-filter {
+  .filter-resources {
+    &.filter-active {
+      @apply bg-brand-blue text-white;
+    }
+  }
+}
+
+.leadgen-form {
+  @apply mt-4;
+  .with_frm_style .frm_form_fields > fieldset {
+    @apply p-0;
+  }
+  .with_frm_style input[type='text'],
+  .with_frm_style input[type='password'],
+  .with_frm_style input[type='email'],
+  .with_frm_style input[type='number'],
+  .with_frm_style input[type='url'],
+  .with_frm_style input[type='tel'] {
+    @apply text-lg placeholder:text-white/50 text-white rounded-none bg-transparent border-t-0 border-x-0 border-b-2 border-white focus:outline-none focus:ring-0 h-[52px];
+  }
+  .frm_style_formidable-style.with_frm_style
+    .form-field
+    input:not([type='file']):focus {
+    @apply outline-none ring-0 bg-transparent border-brand-blue text-white;
+  }
+  .with_frm_style .frm_inside_container > label {
+    @apply text-white h-[52px] text-lg leading-9 placeholder:text-white;
+  }
+  .with_frm_style .frm_primary_label {
+    @apply text-white/50;
+  }
+  .with_frm_style .frm_inside_container.frm_label_float_top > label {
+    @apply text-sm h-auto left-[10px];
+  }
+  .frm_style_formidable-style.with_frm_style .frm_submit button {
+    @apply w-full btn btn-yellow text-brand-bluedark shadow-none !mb-5 bg-brand-yellow hover:bg-brand-orange;
+  }
+  .frm_style_formidable-style.with_frm_style.frm_inline_top .frm_submit::before,
+  .frm_style_formidable-style.with_frm_style
+    .frm_submit.frm_inline_submit::before {
+    @apply p-0;
+    font-size: 0px;
+  }
+  .frm_inline_form .frm_submit {
+    @apply pt-4;
+  }
+  .frm_style_formidable-style.with_frm_style
+    .frm_blank_field
+    input[type='text'],
+  .frm_style_formidable-style.with_frm_style
+    .frm_blank_field
+    input[type='password'],
+  .frm_style_formidable-style.with_frm_style .frm_blank_field input[type='url'],
+  .frm_style_formidable-style.with_frm_style .frm_blank_field input[type='tel'],
+  .frm_style_formidable-style.with_frm_style
+    .frm_blank_field
+    input[type='number'],
+  .frm_style_formidable-style.with_frm_style
+    .frm_blank_field
+    input[type='email'],
+  .frm_style_formidable-style.with_frm_style .frm_blank_field textarea,
+  .frm_style_formidable-style.with_frm_style
+    .frm_blank_field
+    .mce-edit-area
+    iframe,
+  .frm_style_formidable-style.with_frm_style
+    .frm_blank_field
+    select:not(.ui-datepicker-month):not(.ui-datepicker-year),
+  .frm_form_fields_error_style,
+  .frm_style_formidable-style.with_frm_style
+    .frm_blank_field
+    .frm-g-recaptcha
+    iframe,
+  .frm_style_formidable-style.with_frm_style
+    .frm_blank_field
+    .g-recaptcha
+    iframe,
+  .frm_style_formidable-style.with_frm_style
+    .frm_blank_field
+    .frm-card-element.StripeElement,
+  .frm_style_formidable-style.with_frm_style
+    .frm_blank_field
+    .chosen-container-multi
+    .chosen-choices,
+  .frm_style_formidable-style.with_frm_style
+    .frm_blank_field
+    .chosen-container-single
+    .chosen-single,
+  .frm_style_formidable-style.with_frm_style .frm_form_field :invalid {
+    @apply bg-transparent border-brand-red border-t-0 border-x-0 border-b-2;
+  }
+  .frm_style_formidable-style.with_frm_style .frm_blank_field label,
+  .frm_style_formidable-style.with_frm_style .frm_error,
+  .frm_style_formidable-style.with_frm_style .frm_limit_error {
+    @apply pt-1 text-brand-red;
+  }
+  .frm_style_formidable-style.with_frm_style
+    .form-field
+    input:not([type='file']):focus {
+    @apply bg-transparent;
+  }
+}

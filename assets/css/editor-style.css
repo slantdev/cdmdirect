@@ -2630,6 +2630,14 @@
   margin-bottom: 0px !important;
 }
 
+.-ml-1 {
+  margin-left: -0.25rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
 .block {
   display: block;
 }
@@ -2708,6 +2716,10 @@
 
 .h-14 {
   height: 3.5rem;
+}
+
+.h-5 {
+  height: 1.25rem;
 }
 
 .max-h-80 {
@@ -2809,6 +2821,10 @@
 
 .w-\[235px\] {
   width: 235px;
+}
+
+.w-5 {
+  width: 1.25rem;
 }
 
 .min-w-\[280px\] {
@@ -3011,6 +3027,16 @@
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -3082,6 +3108,10 @@
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-x-10 {
@@ -3245,6 +3275,10 @@
 
 .border {
   border-width: 1px;
+}
+
+.border-4 {
+  border-width: 4px;
 }
 
 .border-x-0 {
@@ -3454,6 +3488,10 @@
 
 .bg-opacity-95 {
   --tw-bg-opacity: 0.95;
+}
+
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
 }
 
 .object-cover {
@@ -3991,6 +4029,18 @@
   opacity: 0.5;
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-25 {
+  opacity: 0.25;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
 .mix-blend-multiply {
   mix-blend-mode: multiply;
 }
@@ -4051,6 +4101,10 @@
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition-all {
@@ -4294,6 +4348,14 @@ body {
     width: 50%;
   }
 
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:gap-6 {
+    gap: 1.5rem;
+  }
+
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -4344,8 +4406,16 @@ body {
     max-width: none;
   }
 
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .lg\:flex-nowrap {
     flex-wrap: nowrap;
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
   }
 
   .lg\:gap-x-16 {
@@ -4488,6 +4558,10 @@ body {
 
   .xl\:mb-\[1\.3333em\] {
     margin-bottom: 1.3333em;
+  }
+
+  .xl\:gap-16 {
+    gap: 4rem;
   }
 
   .xl\:gap-x-16 {
@@ -4820,6 +4894,12 @@ body {
 
   .xl\:prose-lg :where(.xl\:prose-lg > :last-child):not(:where([class~="not-prose"] *)) {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .\32xl\:gap-10 {
+    gap: 2.5rem;
   }
 }
 

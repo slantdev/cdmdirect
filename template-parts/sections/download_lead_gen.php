@@ -25,7 +25,9 @@ $form_shortcode = get_sub_field('form_shortcode');
           </div>
         <?php endif; ?>
         <?php if ($form_shortcode) : ?>
-          <?php echo do_shortcode($form_shortcode) ?>
+          <div class="leadgen-form">
+            <?php echo do_shortcode($form_shortcode) ?>
+          </div>
         <?php else : ?>
           <div class="flex gap-x-6 mt-6">
             <input type="text" class="grow w-full text-lg placeholder:text-white/50 bg-transparent border-t-0 border-x-0 border-b-2 border-white focus:outline-none focus:ring-0" placeholder="Business Name">

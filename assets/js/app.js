@@ -29,5 +29,49 @@
     }, function() {
       $("#main-nav").removeClass("bg-brand-bluedark bg-opacity-95");
     });
+    $(".filter-resources").on("click", function(event) {
+      $("#resources-search").val("");
+      $(".filter-resources-buttons .filter-resources").removeClass("filter-active");
+      $(this).addClass("filter-active");
+      $(".resources-loader .spinning-loader").removeClass("opacity-0").addClass("opacity-100");
+      $(".resources-grid .blocker").show();
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "/wp-admin/admin-ajax.php",
+        dataType: "html",
+        data: {
+          action: "filter_resources",
+          category: $(this).data("id"),
+          postsperpage: $(this).data("postsperpage")
+        },
+        success: function(res) {
+          $(".resources-grid").html(res);
+          $(".resources-loader .spinning-loader").removeClass("opacity-100").addClass("opacity-0");
+        }
+      });
+    });
+    $("#resources-search-button").on("click", function(event) {
+      let search_query = $("#resources-search").val();
+      $.ajax({
+        type: "POST",
+        url: "/wp-admin/admin-ajax.php",
+        dataType: "html",
+        data: {
+          action: "search_resources",
+          query: search_query
+        },
+        beforeSend: function() {
+          $(".resources-loader .spinning-loader").removeClass("opacity-0").addClass("opacity-100");
+          $(".resources-grid .blocker").show();
+          $(".filter-resources").removeClass("filter-active");
+        },
+        success: function(res) {
+          $(".resources-grid").html(res);
+          $('.filter-resources[data-id="all"]').addClass("filter-active");
+          $(".resources-loader .spinning-loader").removeClass("opacity-100").addClass("opacity-0");
+        }
+      });
+    });
   });
 })();
