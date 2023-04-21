@@ -135,6 +135,31 @@
             "acfe_permissions": ""
         },
         {
+            "key": "field_64422e9151727",
+            "label": "Lead Text",
+            "name": "lead_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "",
+            "acfe_textarea_code": 0,
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "maxlength": "",
+            "acfe_permissions": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_632acc8b5392d",
             "label": "Text",
             "name": "description",
@@ -301,7 +326,7 @@
     "acfe_form": 1,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1679839737,
+    "modified": 1682058938,
     "acfe_categories": {
         "layout": "Layout"
     }

@@ -1,4 +1,8 @@
 <?php
+/*
+ * Multiple examples of how to customize the Yoast SEO breadcrumbs
+ * https://gist.github.com/amboutwe/ea0791e184668a5c7bd7bbe357c598e9
+ */
 
 add_filter('wpseo_breadcrumb_links', 'cdmdirect_yoast_seo_breadcrumb_append_link');
 function cdmdirect_yoast_seo_breadcrumb_append_link($links)

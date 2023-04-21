@@ -9,6 +9,7 @@ include get_template_directory() . '/template-parts/layouts/section_settings.php
 */
 $column_text_class = 'lg:w-2/3';
 $column_image_class = 'max-w-[360px] lg:max-w-none lg:w-1/3';
+$lead_text = get_sub_field('lead_text');
 
 ?>
 
@@ -20,6 +21,11 @@ $column_image_class = 'max-w-[360px] lg:max-w-none lg:w-1/3';
         <?php get_template_part('template-parts/components/image', '', array('aspect_w' => '1', 'aspect_h' => '1', 'class' => 'h-full w-full object-center object-cover')); ?>
       </div>
       <div class="w-full order-2 <?php echo $column_text_class ?>">
+        <?php if ($lead_text) : ?>
+          <div class="prose max-w-none xl:prose-lg mb-[1.25em] xl:mb-[1.3333em]">
+            <p class="lead"><?php echo $lead_text ?></p>
+          </div>
+        <?php endif; ?>
         <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'max-w-none xl:prose-lg')); ?>
         <?php get_template_part('template-parts/components/buttons', '', array('field' => 'buttons', 'class' => 'mt-6 xl:mt-12')); ?>
       </div>
