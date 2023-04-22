@@ -38,7 +38,7 @@
       event.preventDefault();
       $.ajax({
         type: "POST",
-        url: "/wp-admin/admin-ajax.php",
+        url: ajax.url,
         dataType: "html",
         data: {
           action: "filter_resources",
@@ -55,7 +55,7 @@
       let search_query = $("#resources-search").val();
       $.ajax({
         type: "POST",
-        url: "/wp-admin/admin-ajax.php",
+        url: ajax.url,
         dataType: "html",
         data: {
           action: "search_resources",

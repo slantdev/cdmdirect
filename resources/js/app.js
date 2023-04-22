@@ -66,7 +66,7 @@ jQuery(function ($) {
     event.preventDefault();
     $.ajax({
       type: 'POST',
-      url: '/wp-admin/admin-ajax.php',
+      url: ajax.url,
       dataType: 'html',
       data: {
         action: 'filter_resources',
@@ -88,7 +88,7 @@ jQuery(function ($) {
     //console.log('Query :', search_query);
     $.ajax({
       type: 'POST',
-      url: '/wp-admin/admin-ajax.php',
+      url: ajax.url,
       dataType: 'html',
       data: {
         action: 'search_resources',

@@ -12,8 +12,10 @@ function cdmdirect_enqueue_scripts()
 
   wp_enqueue_style('cdmdirect', cdmdirect_asset('css/app.css'), array(), $theme->get('Version'));
   wp_enqueue_script('cdmdirect', cdmdirect_asset('js/app.js'), array('jquery'), $theme->get('Version'));
+  wp_localize_script('cdmdirect', 'ajax', array(
+    'url' => admin_url('admin-ajax.php')
+  ));
 }
-
 add_action('wp_enqueue_scripts', 'cdmdirect_enqueue_scripts');
 
 function cdmdirect_admin_styles()
