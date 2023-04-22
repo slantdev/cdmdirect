@@ -28,7 +28,9 @@ $form_shortcode = get_sub_field('form_shortcode');
         </div>
         <div class="w-1/2">
           <?php if ($form_shortcode) : ?>
-            <?php echo do_shortcode($form_shortcode) ?>
+            <div class="contactform-1">
+              <?php echo do_shortcode($form_shortcode) ?>
+            </div>
           <?php else : ?>
             <div class="grid grid-cols-2 gap-6 mb-6">
               <div><input type="text" placeholder="First Name" class="input rounded-none w-full border-t-0 border-x-0 border-b border-slate-400 focus:outline-0 focus:ring-0 focus:border-brand-blue"></div>
