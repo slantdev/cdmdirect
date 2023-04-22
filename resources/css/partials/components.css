@@ -110,6 +110,9 @@
   }
   .frm_style_formidable-style.with_frm_style
     .form-field
+    input:not([type='file']):focus,
+  .frm_style_formidable-style-2.with_frm_style
+    .form-field
     input:not([type='file']):focus {
     @apply outline-none ring-0 bg-transparent border-brand-blue text-white;
   }
@@ -122,11 +125,16 @@
   .with_frm_style .frm_inside_container.frm_label_float_top > label {
     @apply text-sm h-auto left-[10px];
   }
-  .frm_style_formidable-style.with_frm_style .frm_submit button {
+  .frm_style_formidable-style.with_frm_style .frm_submit button,
+  .frm_style_formidable-style-2.with_frm_style .frm_submit button {
     @apply w-full btn btn-yellow text-brand-bluedark shadow-none !mb-5 bg-brand-yellow hover:bg-brand-orange;
   }
   .frm_style_formidable-style.with_frm_style.frm_inline_top .frm_submit::before,
   .frm_style_formidable-style.with_frm_style
+    .frm_submit.frm_inline_submit::before,
+  .frm_style_formidable-style-2.with_frm_style.frm_inline_top
+    .frm_submit::before,
+  .frm_style_formidable-style-2.with_frm_style
     .frm_submit.frm_inline_submit::before {
     @apply p-0;
     font-size: 0px;
@@ -176,15 +184,62 @@
     .frm_blank_field
     .chosen-container-single
     .chosen-single,
-  .frm_style_formidable-style.with_frm_style .frm_form_field :invalid {
+  .frm_style_formidable-style.with_frm_style .frm_form_field :invalid,
+  .frm_style_formidable-style-2.with_frm_style
+    .frm_blank_field
+    input[type='text'],
+  .frm_style_formidable-style-2.with_frm_style
+    .frm_blank_field
+    input[type='password'],
+  .frm_style_formidable-style-2.with_frm_style
+    .frm_blank_field
+    input[type='url'],
+  .frm_style_formidable-style-2.with_frm_style
+    .frm_blank_field
+    input[type='tel'],
+  .frm_style_formidable-style-2.with_frm_style
+    .frm_blank_field
+    input[type='number'],
+  .frm_style_formidable-style-2.with_frm_style
+    .frm_blank_field
+    input[type='email'],
+  .frm_style_formidable-style-2.with_frm_style .frm_blank_field textarea,
+  .frm_style_formidable-style-2.with_frm_style
+    .frm_blank_field
+    .mce-edit-area
+    iframe,
+  .frm_style_formidable-style-2.with_frm_style
+    .frm_blank_field
+    select:not(.ui-datepicker-month):not(.ui-datepicker-year),
+  .frm_form_fields_error_style,
+  .frm_style_formidable-style-2.with_frm_style
+    .frm_blank_field
+    .frm-g-recaptcha
+    iframe,
+  .frm_style_formidable-style-2.with_frm_style
+    .frm_blank_field
+    .g-recaptcha
+    iframe,
+  .frm_style_formidable-style-2.with_frm_style
+    .frm_blank_field
+    .frm-card-element.StripeElement,
+  .frm_style_formidable-style-2.with_frm_style
+    .frm_blank_field
+    .chosen-container-multi
+    .chosen-choices,
+  .frm_style_formidable-style-2.with_frm_style
+    .frm_blank_field
+    .chosen-container-single
+    .chosen-single,
+  .frm_style_formidable-style-2.with_frm_style .frm_form_field :invalid {
     @apply bg-transparent border-brand-red border-t-0 border-x-0 border-b-2;
   }
-  .frm_style_formidable-style.with_frm_style .frm_blank_field label,
-  .frm_style_formidable-style.with_frm_style .frm_error,
-  .frm_style_formidable-style.with_frm_style .frm_limit_error {
+  .frm_style_formidable-style-2.with_frm_style .frm_blank_field label,
+  .frm_style_formidable-style-2.with_frm_style .frm_error,
+  .frm_style_formidable-style-2.with_frm_style .frm_limit_error {
     @apply pt-1 text-brand-red;
   }
-  .frm_style_formidable-style.with_frm_style
+  .frm_style_formidable-style-2.with_frm_style
     .form-field
     input:not([type='file']):focus {
     @apply bg-transparent;
