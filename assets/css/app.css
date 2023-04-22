@@ -6767,7 +6767,7 @@ h6,
 
 .leadgen-form .frm_style_formidable-style.with_frm_style .frm_submit button,
   .leadgen-form .frm_style_formidable-style-2.with_frm_style .frm_submit button {
-  margin-bottom: 1.25rem !important;
+  margin-bottom: 0px !important;
   width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgb(255 203 0 / var(--tw-bg-opacity));
@@ -6947,7 +6947,7 @@ h6,
 }
 
 .leadgen-form .frm_inline_form .frm_submit {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 
 .leadgen-form .frm_style_formidable-style.with_frm_style

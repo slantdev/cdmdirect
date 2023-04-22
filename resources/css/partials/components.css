@@ -127,7 +127,7 @@
   }
   .frm_style_formidable-style.with_frm_style .frm_submit button,
   .frm_style_formidable-style-2.with_frm_style .frm_submit button {
-    @apply w-full btn btn-yellow text-brand-bluedark shadow-none !mb-5 bg-brand-yellow hover:bg-brand-orange;
+    @apply w-full btn btn-yellow text-brand-bluedark shadow-none !mb-0 bg-brand-yellow hover:bg-brand-orange;
   }
   .frm_style_formidable-style.with_frm_style.frm_inline_top .frm_submit::before,
   .frm_style_formidable-style.with_frm_style
@@ -140,7 +140,7 @@
     font-size: 0px;
   }
   .frm_inline_form .frm_submit {
-    @apply pt-4;
+    @apply pt-6;
   }
   .frm_style_formidable-style.with_frm_style
     .frm_blank_field
