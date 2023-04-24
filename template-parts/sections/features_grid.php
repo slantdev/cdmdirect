@@ -32,7 +32,7 @@ $description = get_sub_field('description');
         </div>
       <?php } ?>
       <?php if ($description) { ?>
-        <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'font-nunito text-lg')); ?>
+        <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'text-lg')); ?>
       <?php } ?>
     </div>
 
@@ -63,7 +63,7 @@ $description = get_sub_field('description');
                 <h4 class="text-[22px] leading-tight font-bold text-brand-bluedark mb-4"><?php echo $title ?></h4>
               <?php endif; ?>
               <?php if ($description) : ?>
-                <div class="line-clamp-3 font-nunito"><?php echo $description ?></div>
+                <div class="font-nunito"><?php echo $description ?></div>
               <?php endif; ?>
             </div>
           <?php endforeach; ?>
