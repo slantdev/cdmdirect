@@ -2,17 +2,22 @@
 $about = get_field('about', 'option');
 $contact_info = get_field('contact_info', 'option');
 $footer_links = get_field('footer_links', 'option');
+$newsletter_title = get_field('newsletter_title', 'option');
+$newsletter_form_shortcode = get_field('newsletter_form_shortcode', 'option');
 ?>
 
 <footer class="bg-brand-graylight py-28">
   <div class="container max-w-screen-xl">
     <div class="bg-brand-bluedark rounded-xl p-10">
       <div class="flex gap-x-10 items-center">
-        <div class="font-semibold text-[28px] text-white">Subscribe to our newsletters</div>
-        <div class="grow flex gap-x-6">
-          <input type="email" placeholder="Email address" class="grow text-lg placeholder:text-white/50 bg-transparent border-t-0 border-x-0 border-b-2 border-white focus:outline-none focus:ring-0">
-          <button class="inline-block h-auto min-h-min px-8 py-3 border-2 border-white text-lg text-white font-semibold normal-case no-underline rounded-full transition-all duration-300 hover:bg-white hover:text-brand-bluedark">Send</button>
-        </div>
+        <?php if ($newsletter_title) : ?>
+          <div class="w-2/5 font-semibold text-[28px] leading-tight text-white"><?php echo $newsletter_title ?></div>
+        <?php endif; ?>
+        <?php if ($newsletter_form_shortcode) : ?>
+          <div class="w-3/5">
+            <?php echo do_shortcode($newsletter_form_shortcode); ?>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>

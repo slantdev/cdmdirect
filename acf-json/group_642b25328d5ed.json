@@ -693,6 +693,69 @@
                     "parent_repeater": "field_642b752973f5a"
                 }
             ]
+        },
+        {
+            "key": "field_6449dd816b4fb",
+            "label": "Newsletter",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6449dd986b4fc",
+            "label": "Newsletter Title",
+            "name": "newsletter_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6449ddb86b4fd",
+            "label": "Newsletter Form Shortcode",
+            "name": "newsletter_form_shortcode",
+            "aria-label": "",
+            "type": "acfe_code_editor",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "",
+            "placeholder": "",
+            "mode": "text\/html",
+            "lines": 1,
+            "indent_unit": 4,
+            "maxlength": "",
+            "rows": 3,
+            "max_rows": "",
+            "return_format": []
         }
     ],
     "location": [
@@ -720,7 +783,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1682098280,
+    "modified": 1682562815,
     "acfe_categories": {
         "options": "Options"
     }

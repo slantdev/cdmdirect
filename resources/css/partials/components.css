@@ -349,3 +349,29 @@
     @apply shadow-[inset_0px_2px_6px_0px_rgba(0,0,0,0.12)];
   }
 }
+
+#form_newsletter {
+  .frm_inside_container {
+  }
+  .form-field {
+    @apply mb-0;
+  }
+  input[type='email'] {
+    @apply text-lg shadow-none h-14 rounded-none text-white placeholder:text-white/50 bg-transparent border-t-0 border-x-0 border-b-2 border-white focus:outline-none focus:ring-0;
+  }
+  .frm_primary_label {
+    @apply text-white/50;
+  }
+  .frm_inside_container > label {
+    @apply left-0 text-lg;
+  }
+  .frm_submit {
+    @apply col-span-3;
+  }
+  .frm_submit button {
+    @apply inline-block h-auto min-h-min px-8 py-3 border-2 bg-transparent w-full border-white text-lg text-white font-semibold normal-case no-underline rounded-full transition-all duration-300 hover:bg-white hover:text-brand-bluedark;
+  }
+  .frm_error {
+    @apply mt-0.5;
+  }
+}
