@@ -3255,6 +3255,10 @@
   overflow-x: hidden;
 }
 
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -4798,6 +4802,10 @@ body {
     height: 3rem;
   }
 
+  .lg\:h-\[60vh\] {
+    height: 60vh;
+  }
+
   .lg\:w-10 {
     width: 2.5rem;
   }
@@ -5079,6 +5087,10 @@ body {
     padding-right: 1.5rem;
   }
 
+  .lg\:pt-\[300px\] {
+    padding-top: 300px;
+  }
+
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -5201,8 +5213,24 @@ body {
     margin-top: -3rem;
   }
 
+  .xl\:flex {
+    display: flex;
+  }
+
+  .xl\:hidden {
+    display: none;
+  }
+
   .xl\:h-\[60vh\] {
     height: 60vh;
+  }
+
+  .xl\:h-\[80h\] {
+    height: 80h;
+  }
+
+  .xl\:h-\[80vh\] {
+    height: 80vh;
   }
 
   .xl\:min-h-\[60vh\] {
@@ -5607,9 +5635,51 @@ body {
 }
 
 @media (min-width: 1440px) {
+  .\32xl\:h-\[60vh\] {
+    height: 60vh;
+  }
+
+  .\32xl\:gap-x-12 {
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
+
+  .\32xl\:gap-x-10 {
+    -moz-column-gap: 2.5rem;
+         column-gap: 2.5rem;
+  }
+
   .\32xl\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .\32xl\:pt-\[216px\] {
+    padding-top: 216px;
+  }
+
+  .\32xl\:pt-\[400px\] {
+    padding-top: 400px;
+  }
+
+  .\32xl\:pt-\[300px\] {
+    padding-top: 300px;
+  }
+
+  .\32xl\:pt-\[320px\] {
+    padding-top: 320px;
+  }
+
+  .\32xl\:pb-20 {
+    padding-bottom: 5rem;
+  }
+
+  .\32xl\:pt-\[340px\] {
+    padding-top: 340px;
+  }
+
+  .\32xl\:pb-24 {
+    padding-bottom: 6rem;
   }
 }
 

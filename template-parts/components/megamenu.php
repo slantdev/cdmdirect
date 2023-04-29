@@ -1,12 +1,12 @@
 <?php
 ?>
-<div class="main-nav--div flex gap-x-10 items-center shadow-[0_1px_0px_rgba(255,255,255,0.5)] 4xl:gap-x-14">
+<div class="main-nav--div flex gap-x-6 items-center shadow-[0_1px_0px_rgba(255,255,255,0.5)] 2xl:gap-x-10 4xl:gap-x-14">
   <?php
   $menu_items = get_field('menu_items', 'option');
   //preint_r($menu_items);
   if ($menu_items) :
   ?>
-    <ul class="main-nav--ul flex gap-x-12 3xl:gap-x-14 4xl:gap-x-16">
+    <ul class="main-nav--ul flex gap-x-5 2xl:gap-x-12 3xl:gap-x-14 4xl:gap-x-16">
       <?php foreach ($menu_items as $menu_id => $menu) : ?>
         <?php
         $menu_item = $menu['menu_item'];
@@ -118,7 +118,7 @@
   $phone = $links['phone'];
   if ($phone) :
   ?>
-    <a href="<?php echo $phone['url'] ?>" target="<?php echo $phone['target'] ?>" class="flex px-6 py-3 gap-x-4 text-white font-medium border border-solid border-white rounded-full bg-transparent hover:bg-brand-orange hover:border-brand-orange transition duration-200">
+    <a href="<?php echo $phone['url'] ?>" target="<?php echo $phone['target'] ?>" class="flex px-6 py-3 gap-x-4 text-white font-medium whitespace-nowrap border border-solid border-white rounded-full bg-transparent hover:bg-brand-orange hover:border-brand-orange transition duration-200">
       <?php echo cdmdirect_icon(array('icon' => 'phone', 'group' => 'utilities', 'size' => '24', 'class' => 'text-white')); ?>
       <span><?php echo $phone['title'] ?></span>
     </a>
