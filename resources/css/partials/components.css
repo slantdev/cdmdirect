@@ -401,7 +401,7 @@
     @apply left-0 text-lg;
   }
   .frm_submit {
-    @apply col-span-3 pt-[27px];
+    @apply col-span-3;
   }
   .frm_submit button {
     @apply inline-block h-auto min-h-min px-8 py-3 border-2 bg-transparent w-full border-white text-lg text-white font-semibold normal-case no-underline rounded-full transition-all duration-300 hover:bg-white hover:text-brand-bluedark;
