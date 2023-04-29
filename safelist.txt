@@ -17,3 +17,7 @@ max-w-screen-lg
 max-w-screen-xl
 aspect-w-16
 aspect-h-9
+invisible
+visible
+opacity-0
+opacity-100

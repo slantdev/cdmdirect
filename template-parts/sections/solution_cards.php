@@ -27,12 +27,12 @@ $button = get_sub_field('button');
       <?php echo cdmdirect_svg(array('svg' => 'shape-2', 'group' => 'shape', 'width' => '980', 'height' => '821', 'class' => 'text-[#F7F9FA] translate-x-[320px] translate-y-[440px]')); ?>
     </div>
     <div class="container max-w-screen-xl relative">
-      <div class="flex gap-x-16 items-center">
-        <div class="w-2/3">
+      <div class="flex flex-col lg:flex-row gap-8 lg:gap-x-16 items-center">
+        <div class="w-full lg:w-2/3 order-2 lg:order-1">
           <?php
           $solution_cards = get_sub_field('solution_cards_group')['info_cards'];
           if ($solution_cards) : ?>
-            <div class="solution-cards grid grid-cols-2 gap-6">
+            <div class="solution-cards grid grid-cols-1 gap-6 md:grid-cols-2">
               <?php foreach ($solution_cards as $card) : ?>
                 <?php
                 $icon_svg = $card['icon_svg'];
@@ -79,12 +79,12 @@ $button = get_sub_field('button');
             </div>
           <?php endif; ?>
         </div>
-        <div class="w-1/3">
+        <div class="w-full lg:w-1/3 order-1 lg:order-2 ">
           <?php if ($sub_headline) { ?>
             <?php get_template_part('template-parts/components/heading', '', array('field' => 'sub_headline', 'class' => 'font-medium text-slate-800', 'border' => $sub_headline_border)); ?>
           <?php } ?>
           <?php if ($headline) { ?>
-            <div class="max-w-prose mx-auto mt-12">
+            <div class="mt-0 lg:mt-12">
               <?php get_template_part('template-parts/components/heading', '', array('field' => 'headline', 'class' => 'leading-tight font-bold text-brand-blue')); ?>
             </div>
           <?php } ?>

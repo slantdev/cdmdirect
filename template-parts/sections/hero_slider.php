@@ -35,18 +35,18 @@ if ($hero_slider) : ?>
                 <img src="<?php echo $slide_image['url'] ?>" alt="<?php echo $slide_image['alt'] ?>" class="object-cover h-full w-full opacity-100">
               </div>
             <?php endif; ?>
-            <div class="container max-w-screen-xl relative z-10 pt-[216px] pb-10 h-full">
-              <div class="flex h-full items-center text-white">
+            <div class="container max-w-screen-xl relative z-10 pt-52 lg:pt-[216px] pb-10 h-full">
+              <div class="flex h-full items-center text-white lg:px-24 xl:px-28 2xl:px-0">
                 <div class="max-w-[880px]">
                   <?php if ($sub_headline) : ?>
-                    <h2 class="font-bold text-[28px]"><?php echo $sub_headline; ?></h2>
-                    <div class="w-[70px] border-b-[3px] border-solid border-brand-orange my-6"></div>
+                    <h2 class="font-bold text-xl lg:text-2xl xl:text-[28px]"><?php echo $sub_headline; ?></h2>
+                    <div class="w-14 lg:w-[70px] border-b-[3px] border-solid border-brand-orange my-6"></div>
                   <?php endif; ?>
                   <?php if ($headline) : ?>
-                    <h1 class="font-light text-[54px] leading-tight"><?php echo $headline; ?></h1>
+                    <h1 class="font-light text-4xl lg:text-5xl xl:text-[54px] lg:leading-tight"><?php echo $headline; ?></h1>
                   <?php endif; ?>
                   <?php if ($description) : ?>
-                    <div class="mt-6 text-lg font-medium">
+                    <div class="mt-6 text-base lg:text-lg font-medium">
                       <?php echo $description; ?>
                     </div>
                   <?php endif; ?>

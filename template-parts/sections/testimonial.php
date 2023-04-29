@@ -18,7 +18,7 @@ $testimonial_posts = get_sub_field('testimonial_posts');
   <div class="relative z-10 <?php echo $section_padding_top . ' ' . $section_padding_bottom ?>">
     <?php if ($headline) : ?>
       <div class="container max-w-screen-md">
-        <h3 class="text-[34px] leading-tight font-bold text-white text-center mt-6 mb-6"><?php echo $headline ?></h3>
+        <h3 class="text-3xl lg:text-[34px] leading-tight font-bold text-white text-center mt-6 mb-6"><?php echo $headline ?></h3>
       </div>
     <?php endif; ?>
 
@@ -35,7 +35,7 @@ $testimonial_posts = get_sub_field('testimonial_posts');
             $client_image = get_field('client_image', $slide->ID);
             ?>
             <div class="swiper-slide">
-              <div class="container max-w-screen-md text-center text-white">
+              <div class="container max-w-screen-md md:px-20 lg:px-8 text-center text-white">
                 <?php if ($testimonial) : ?>
                   <div class="font-nunito text-lg"><?php echo $testimonial ?></div>
                 <?php endif; ?>
@@ -54,8 +54,8 @@ $testimonial_posts = get_sub_field('testimonial_posts');
             </div>
           <?php endforeach; ?>
         </div>
-        <div class="swiper-button-prev text-white opacity-50 hover:opacity-100"></div>
-        <div class="swiper-button-next text-white opacity-50 hover:opacity-100"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
       <script>
         const testimonial_slider = new Swiper('#testimonial-slider', {

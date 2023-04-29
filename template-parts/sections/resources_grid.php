@@ -18,8 +18,8 @@ $show_search = $section_intro['show_search'];
 <section id="<?php echo $section_id ?>" style="<?php echo $section_style ?>">
   <div class="relative <?php echo $section_padding_top . ' ' . $section_padding_bottom ?>">
     <div class="container max-w-screen-xl relative">
-      <div class="flex gap-x-12 items-end">
-        <div class="w-2/3">
+      <div class="flex flex-col lg:flex-row lg:gap-x-12 lg:items-end">
+        <div class="w-full lg:w-2/3">
           <?php if ($sub_headline) : ?>
             <h4><span class="inline-block pb-3 border-b-2 border-brand-blue text-lg text-slate-800 font-medium"><?php echo $sub_headline; ?></span></h4>
           <?php endif; ?>
@@ -32,11 +32,11 @@ $show_search = $section_intro['show_search'];
             </div>
           <?php endif; ?>
         </div>
-        <div class="w-1/3 flex flex-col items-end">
+        <div class="w-full lg:w-1/3 flex flex-col items-end">
           <?php if ($show_search) : ?>
-            <div class="flex p-1 w-full border border-slate-200 shadow-[inset_0px_2px_6px_0px_rgba(0,0,0,0.12)] rounded-full overflow-hidden">
-              <input id="resources-search" type="text" placeholder="Insert your query query" name="resources-search" class="input px-6 w-full bg-transparent focus:outline-0 focus:border-0 focus:ring-0">
-              <button id="resources-search-button" class="rounded-full px-10 bg-brand-bluedark font-bold text-white">Search</button>
+            <div class="flex p-1 w-full border border-slate-200 shadow-[inset_0px_2px_6px_0px_rgba(0,0,0,0.12)] rounded-full overflow-hidden mt-8 lg:mt-0">
+              <input id="resources-search" type="text" placeholder="Insert your query" name="resources-search" class="input h-10 lg:h-12 text-sm lg:text-base px-4 lg:px-6 w-full bg-transparent focus:outline-0 focus:border-0 focus:ring-0">
+              <button id="resources-search-button" class="rounded-full px-6 lg:px-10 bg-brand-bluedark font-bold text-white">Search</button>
             </div>
           <?php endif; ?>
         </div>
@@ -44,7 +44,7 @@ $show_search = $section_intro['show_search'];
     </div>
     <div class="container max-w-screen-xl">
       <div class="px-12 lg:px-14 relative -mx-2 lg:-mx-0">
-        <div id="resources-filter" class="swiper mt-10 px-2 pt-2 pb-4">
+        <div id="resources-filter" class="swiper mt-6 lg:mt-10 px-2 pt-2 pb-4">
           <div class="swiper-wrapper filter-resources-buttons">
             <?php
             $taxonomies = get_terms(array(
@@ -140,7 +140,7 @@ $show_search = $section_intro['show_search'];
           </div>
         </div>
         <div class="resources-grid relative">
-          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:gap-8 xl:gap-16">
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6 lg:gap-8 xl:gap-16">
             <?php while ($the_query->have_posts()) {
               $the_query->the_post();
               $excerpt = wp_trim_words(get_the_excerpt(), $num_words = 30, $more = null);

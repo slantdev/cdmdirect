@@ -24,26 +24,26 @@ $contact_center = get_sub_field('contact_center');
         if ($k == $lastKey) {
           echo '<div class="container max-w-screen-xl">';
         } else {
-          echo '<div class="container max-w-screen-xl mb-24">';
+          echo '<div class="container max-w-screen-xl mb-12 lg:mb-24">';
         }
 
-        echo '<div class="flex items-center gap-x-16">';
+        echo '<div class="flex flex-col lg:flex-row lg:items-center lg:gap-x-10 xl:gap-x-16">';
 
         if ($headline) :
-          echo '<div class="w-1/2"><h2 class="text-brand-blue text-[34px] font-bold">' . $headline . '</h2></div>';
+          echo '<div class="w-full lg:w-1/2"><h2 class="text-brand-blue text-3xl lg:text-[34px] font-bold mb-4 lg:mb-0">' . $headline . '</h2></div>';
         endif;
 
         if ($description) :
-          echo '<div class="w-1/2"><div class="prose max-w-none">' . $description . '</div></div>';
+          echo '<div class="w-full lg:w-1/2"><div class="prose max-w-none">' . $description . '</div></div>';
         endif;
 
         echo '</div>';
 
         if ($addresses) :
           if (count($addresses) > 1) {
-            echo '<div class="grid grid-cols-2 gap-16 mt-12">';
+            echo '<div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8 lg:gap-10 xl:gap-16 mt-8 lg:mt-12">';
           } else {
-            echo '<div class="grid grid-cols-1 gap-16 mt-12">';
+            echo '<div class="grid grid-cols-1 gap-10 lg:gap-10 xl:gap-16 mt-8 lg:mt-12">';
           }
           foreach ($addresses as $address) :
             $image = $address['image'];
@@ -54,17 +54,17 @@ $contact_center = get_sub_field('contact_center');
               if (count($addresses) > 1) {
                 echo '<div class="aspect-w-3 aspect-h-2">';
               } else {
-                echo '<div class="aspect-w-16 aspect-h-6">';
+                echo '<div class="aspect-w-3 aspect-h-2 lg:aspect-w-16 lg:aspect-h-6">';
               }
               echo '<img src="' . $image['url'] . '" alt="" class="object-cover h-full w-full rounded-lg" />';
               echo '</div>';
             }
-            echo '<div class="mt-10">';
+            echo '<div class="mt-4 lg:mt-10">';
             if ($city) {
-              echo '<h4 class="pb-4 border-b border-slate-300 mb-4 font-bold text-[28px] text-slate-800">' . $city . '</h4>';
+              echo '<h4 class="pb-4 border-b border-slate-300 mb-4 font-bold text-2xl lg:text-[28px] text-slate-800">' . $city . '</h4>';
             }
             if ($address) {
-              echo '<div class="text-lg text-slate-800">' . $address . '</div>';
+              echo '<div class="text-base lg:text-lg text-slate-800">' . $address . '</div>';
             }
             echo '</div>';
             echo '</div>';

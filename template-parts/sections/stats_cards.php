@@ -36,9 +36,9 @@ if ($background_overlay) {
         <img src="<?php echo $background_url ?>" alt="" class="object-bottom object-cover h-full w-full opacity-100">
       </div>
     <?php endif; ?>
-    <div class="container max-w-screen-xl relative pt-32 pb-0">
-      <div class="flex">
-        <div class="w-2/3">
+    <div class="container max-w-screen-xl relative pt-16 xl:pt-32 pb-0">
+      <div class="flex flex-col lg:flex-row">
+        <div class="w-full lg:w-2/3">
           <?php if ($sub_headline) { ?>
             <?php get_template_part('template-parts/components/heading', '', array('field' => 'sub_headline', 'class' => 'font-medium text-white', 'border' => $sub_headline_border)); ?>
           <?php } ?>
@@ -49,16 +49,16 @@ if ($background_overlay) {
             <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'text-lg text-white')); ?>
           <?php } ?>
         </div>
-        <div class="w-1/3">
+        <div class="hidden w-full lg:w-1/3">
           <?php echo cdmdirect_icon(array('icon' => 'play-button', 'group' => 'utilities', 'size' => '120', 'class' => 'text-brand-blue mx-auto mt-10')); ?>
         </div>
       </div>
     </div>
     <?php if ($stats_cards) : ?>
-      <div class="container max-w-screen-xl relative translate-y-1/4">
-        <div class="grid grid-cols-3 gap-x-12">
+      <div class="container max-w-screen-xl relative pt-4 lg:pt-0 pb-16 lg:pb-0 lg:translate-y-1/4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-x-12">
           <?php foreach ($stats_cards as $card) : ?>
-            <div class="bg-white rounded-lg p-10 text-center shadow-[0_0_20px_rgb(225,228,237,1)]">
+            <div class="bg-white rounded-lg p-6 lg:p-10 text-center shadow-[0_0_20px_rgb(225,228,237,1)]">
               <?php
               $number = isset($card['number']) ? $card['number'] : '';
               $title = isset($card['title']) ? $card['title'] : '';

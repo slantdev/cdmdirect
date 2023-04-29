@@ -31,6 +31,21 @@ if ($description_max_width) {
     case "default":
       $description_class .= '';
       break;
+    case "max-w-none":
+      $description_class .= ' max-w-none';
+      break;
+    case "max-w-screen-sm":
+      $description_class .= ' max-w-screen-sm';
+      break;
+    case "max-w-screen-md":
+      $description_class .= ' max-w-screen-md';
+      break;
+    case "max-w-screen-lg":
+      $description_class .= ' max-w-screen-lg';
+      break;
+    case "max-w-screen-xl":
+      $description_class .= ' max-w-screen-xl';
+      break;
     default:
       $description_class .= $description_max_width;
   }

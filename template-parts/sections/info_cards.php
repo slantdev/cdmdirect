@@ -17,12 +17,12 @@ $description = get_sub_field('description');
   <div class="relative <?php echo $section_padding_top . ' ' . $section_padding_bottom ?>">
     <div class="container max-w-screen-md text-center">
       <?php if ($headline) { ?>
-        <div class="max-w-prose mx-auto mt-12">
+        <div class="max-w-prose mx-auto mt-6 lg:mt-12">
           <?php get_template_part('template-parts/components/heading', '', array('field' => 'headline', 'class' => 'leading-tight font-bold text-brand-blue')); ?>
         </div>
       <?php } ?>
       <?php if ($description) { ?>
-        <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'font-nunito text-lg')); ?>
+        <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'font-nunito text-base md:text-lg')); ?>
       <?php } ?>
     </div>
 
@@ -31,7 +31,7 @@ $description = get_sub_field('description');
     //preint_r($features);
     if ($info_cards) : ?>
       <div class="container max-w-screen-xl mt-12">
-        <div class="grid grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <?php foreach ($info_cards as $card) : ?>
             <?php
             $icon_svg = $card['icon_svg'];
@@ -45,9 +45,9 @@ $description = get_sub_field('description');
             $link = $card['link'];
             ?>
             <?php if (isset($link['url'])) {
-              echo '<a href="' . $link['url'] . '" class="relative block bg-white rounded-lg pl-8 pt-8 pr-16 pb-16 shadow-[0_0_20px_rgb(225,228,237,1)] hover:shadow-[0_0_24px_rgb(0,0,0,0.16)] transition duration-300">';
+              echo '<a href="' . $link['url'] . '" class="relative block bg-white rounded-lg pl-6 pr-12 md:pl-8 pt-8 md:pr-16 pb-16 shadow-[0_0_20px_rgb(225,228,237,1)] hover:shadow-[0_0_24px_rgb(0,0,0,0.16)] transition duration-300">';
             } else {
-              echo '<div class="relative block bg-white rounded-lg pl-8 pt-8 pr-8 pb-8 shadow-[0_0_20px_rgb(225,228,237,1)]">';
+              echo '<div class="relative block bg-white rounded-lg p-6 md:p-8 shadow-[0_0_20px_rgb(225,228,237,1)]">';
             } ?>
 
             <?php if ($icon_svg) { ?>
@@ -55,7 +55,7 @@ $description = get_sub_field('description');
             <?php } ?>
 
             <?php if ($title) { ?>
-              <h5 class="text-slate-800 font-bold text-[28px] mt-8 mb-6"><?php echo $title ?></h5>
+              <h5 class="text-slate-800 font-bold text-2xl md:text-[28px] mt-6 md:mt-8 mb-4 md:mb-6"><?php echo $title ?></h5>
             <?php } ?>
 
             <?php if ($description) { ?>

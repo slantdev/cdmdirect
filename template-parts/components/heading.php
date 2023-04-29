@@ -37,7 +37,7 @@ switch ($heading_size) {
     $heading_class .= ' text-sm xl:text-md';
     break;
   case "lg":
-    $heading_class .= ' text-md xl:text-lg';
+    $heading_class .= ' text-base xl:text-lg';
     break;
   case "xl":
     $heading_class .= ' text-lg xl:text-xl';
@@ -68,7 +68,8 @@ switch ($heading_margin_top) {
     $heading_class .= ' mt-4 xl:mt-8';
     break;
   case "md":
-    $heading_class .= ' mt-8 xl:mt-12';
+    //$heading_class .= ' mt-8 xl:mt-12';
+    $heading_class .= ' mt-6 md:mt-8 lg:mt-10 xl:mt-12';
     break;
   case "lg":
     $heading_class .= ' mt-12 xl:mt-16';
@@ -93,16 +94,20 @@ switch ($heading_margin_bottom) {
     $heading_class .= ' mb-4 xl:mb-8';
     break;
   case "md":
-    $heading_class .= ' mb-8 xl:mb-12';
+    //$heading_class .= ' mb-8 xl:mb-12';
+    $heading_class .= ' mb-6 lg:mb-10 xl:mb-12';
     break;
   case "lg":
-    $heading_class .= ' mb-12 xl:mb-16';
+    //$heading_class .= ' mb-12 xl:mb-16';
+    $heading_class .= ' mb-8 lg:mb-14 xl:mb-16';
     break;
   case "xl":
-    $heading_class .= ' mb-16 xl:mb-20';
+    //$heading_class .= ' mb-16 xl:mb-20';
+    $heading_class .= ' mb-12 lg:mb-16 xl:mb-20';
     break;
   case "2xl":
-    $heading_class .= ' mb-20 xl:mb-24';
+    //$heading_class .= ' mb-20 xl:mb-24';
+    $heading_class .= ' mb-16 lg:mb-20 xl:mb-24';
     break;
   default:
     $heading_class .= ' mb-4 xl:mb-8';

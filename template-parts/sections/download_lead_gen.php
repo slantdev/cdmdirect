@@ -15,12 +15,12 @@ $form_shortcode = get_sub_field('form_shortcode');
 <section id="<?php echo $section_id ?>" style="<?php echo $section_style ?>">
   <div class="relative <?php echo $section_padding_top . ' ' . $section_padding_bottom ?>">
     <div class="container max-w-screen-xl">
-      <div class="bg-brand-bluedark rounded-lg p-10 text-white">
+      <div class="bg-brand-bluedark rounded-lg p-6 lg:p-10 text-white">
         <?php if ($headline) : ?>
           <h3 class="text-[34px] font-semibold mb-6"><?php echo $headline ?></h3>
         <?php endif; ?>
         <?php if ($description) : ?>
-          <div class="text-lg font-medium">
+          <div class="text-base lg:text-lg font-medium">
             <?php echo $description ?>
           </div>
         <?php endif; ?>

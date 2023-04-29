@@ -28,8 +28,8 @@ $column_image_class = 'max-w-[360px] lg:max-w-none lg:w-1/3';
     //preint_r($image_center);
     if ($image_center) :
     ?>
-      <div class="mt-16">
-        <div class="aspect-w-16 aspect-h-6">
+      <div class="mt-4 md:mt-8 lg:mt-12 xl:mt-16">
+        <div class="aspect-w-16 aspect-h-9 md:aspect-h-8 lg:aspect-h-6">
           <img src='<?php echo $image_center['url'] ?>' alt='<?php echo $image_center['alt'] ?>' class="object-cover h-full w-full rounded-tl-[300px] rounded-tr-[300px] rounded-br-[120px] rounded-bl-[300px]" />
         </div>
       </div>

@@ -24,8 +24,8 @@ $view_all_link = get_sub_field('view_all_link');
 <section id="<?php echo $section_id ?>" style="<?php echo $section_style ?>">
   <div class="relative z-10 <?php echo $section_padding_top . ' ' . $section_padding_bottom ?>">
     <div class="container max-w-screen-xl relative">
-      <div class="flex gap-x-12">
-        <div class="w-1/2">
+      <div class="flex flex-col gap-4 md:flex-row md:gap-x-10 lg:gap-x-12">
+        <div class="w-full md:w-1/2">
           <?php if ($sub_headline) { ?>
             <?php get_template_part('template-parts/components/heading', '', array('field' => 'sub_headline', 'class' => 'font-medium text-slate-800', 'border' => $sub_headline_border)); ?>
           <?php } ?>
@@ -33,9 +33,9 @@ $view_all_link = get_sub_field('view_all_link');
             <?php get_template_part('template-parts/components/heading', '', array('field' => 'headline', 'class' => 'leading-tight font-bold text-brand-bluedark mt-6 mb-6')); ?>
           <?php } ?>
         </div>
-        <div class="w-1/2 flex flex-col items-end">
+        <div class="w-full md:w-1/2 flex flex-col md:items-end -mt-8 md:-mt-0">
           <?php if ($view_all_link) { ?>
-            <a href="<?php echo $view_all_link['url'] ?>" class="text-brand-blue text-lg font-bold hover:underline">View All</a>
+            <a href="<?php echo $view_all_link['url'] ?>" class="text-brand-blue text-sm lg:text-lg font-bold hover:underline">View All</a>
           <?php } ?>
           <!-- <select name="" id="" class="mt-6 rounded-full bg-white pl-8 pr-12 py-4 font-bold text-slate-800 border-none min-w-[280px] shadow-inner">
             <option value="">Featured</option>
@@ -52,7 +52,7 @@ $view_all_link = get_sub_field('view_all_link');
     $case_studies_posts = $case_studies['case_studies_posts'];
     if ($case_studies_posts) :
     ?>
-      <div class="container max-w-screen-xl pt-16 relative">
+      <div class="container max-w-screen-xl pt-12 lg:pt-16 relative">
         <div class="flex flex-col gap-y-12">
           <?php foreach ($case_studies_posts as $key => $post) :
             $permalink = get_permalink($post->ID);
@@ -61,36 +61,36 @@ $view_all_link = get_sub_field('view_all_link');
             $thumbnail = get_the_post_thumbnail_url($post->ID, 'full');
           ?>
             <?php if ($key & 1) { ?>
-              <div class="flex gap-x-12 items-center">
-                <div class="w-1/3 order-2">
-                  <h3 class="text-[34px] leading-tight font-bold text-brand-blue mt-6 mb-6"><?php echo $title ?></h3>
-                  <div class="text-lg mb-12 font-nunito line-clamp-3">
+              <div class="flex flex-col lg:flex-row lg:gap-x-8 xl:gap-x-12 items-center">
+                <div class="w-full lg:w-1/3 order-2 lg:order-2">
+                  <h3 class="text-3xl lg:text-[34px] leading-tight font-bold text-brand-blue mt-6 mb-6"><?php echo $title ?></h3>
+                  <div class="text-lg mb-6 lg:mb-12 font-nunito line-clamp-3">
                     <?php echo $excerpt; ?>
                   </div>
                   <a href="<?php echo $permalink ?>" class="btn btn-primary"><span>Read more</span></a>
                 </div>
-                <div class="w-2/3 pr-24 order-1">
-                  <div class="aspect-w-8 aspect-h-6">
+                <div class="w-full order-1 lg:w-2/3 lg:pr-10 xl:pr-24 lg:order-1">
+                  <div class="aspect-w-8 aspect-h-5 lg:aspect-h-6">
                     <img src='<?php echo $thumbnail ?>' alt='' class="object-cover h-full w-full rounded-tl-[300px] rounded-tr-[300px] rounded-bl-[50px] rounded-br-[300px]" />
                   </div>
                 </div>
               </div>
             <?php } else { ?>
-              <div class="flex gap-x-12 items-center">
-                <div class="w-1/3">
-                  <h3 class="text-[34px] leading-tight font-bold text-brand-blue mt-6 mb-6"><?php echo $title ?></h3>
-                  <div class="text-lg mb-12 font-nunito line-clamp-3">
+              <div class="flex flex-col lg:flex-row lg:gap-x-8 xl:gap-x-12 lg:items-center">
+                <div class="w-full lg:w-1/3 order-2 lg:order-1">
+                  <h3 class="text-3xl lg:text-[34px] leading-tight font-bold text-brand-blue mt-6 mb-6"><?php echo $title ?></h3>
+                  <div class="text-lg mb-6 lg:mb-12 font-nunito line-clamp-3">
                     <?php echo $excerpt; ?>
                   </div>
                   <a href="<?php echo $permalink ?>" class="btn btn-primary"><span>Read more</span></a>
                 </div>
-                <div class="w-2/3 pl-24">
+                <div class="w-full lg:w-2/3 lg:pl-10 xl:pl-24 order-1 lg:order-2">
                   <?php if ($thumbnail) : ?>
-                    <div class="aspect-w-8 aspect-h-6">
+                    <div class="aspect-w-8 aspect-h-5 lg:aspect-h-6">
                       <img src='<?php echo $thumbnail ?>' alt='' class="object-cover h-full w-full rounded-tl-[300px] rounded-tr-[300px] rounded-br-[50px] rounded-bl-[300px]" />
                     </div>
                   <?php else : ?>
-                    <div class="aspect-w-8 aspect-h-6 bg-slate-100 rounded-tl-[300px] rounded-tr-[300px] rounded-br-[50px] rounded-bl-[300px]">
+                    <div class="aspect-w-8 aspect-h-5 lg:aspect-h-6 bg-slate-100 rounded-tl-[300px] rounded-tr-[300px] rounded-br-[50px] rounded-bl-[300px]">
                       <div class="h-full w-full"></div>
                     </div>
                   <?php endif; ?>

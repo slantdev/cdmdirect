@@ -1,5 +1,5 @@
 .btn {
-  @apply inline-block h-auto min-h-min px-8 py-3 border-none text-lg font-semibold normal-case no-underline rounded-full transition-all duration-300 hover:bg-transparent;
+  @apply inline-block h-auto min-h-min px-6 lg:px-8 py-2.5 lg:py-3 border-none text-base lg:text-lg font-semibold normal-case no-underline rounded-full transition-all duration-300 hover:bg-transparent;
   &.btn-primary,
   &.btn-indigo-blue {
     @apply bg-gradient-to-tr from-[#6852ED] to-[#429DF7] text-white relative overflow-hidden;

@@ -1,7 +1,7 @@
 .breadcrumb {
-  @apply text-base text-slate-800;
+  @apply text-slate-800 text-sm lg:text-base;
   > span {
-    @apply flex gap-x-3;
+    @apply flex flex-wrap gap-2 lg:gap-3;
   }
   a {
     @apply hover:text-brand-blue;
@@ -11,11 +11,14 @@
 #hero-slider {
   .swiper-button-next,
   .swiper-button-prev {
-    @apply text-white hover:text-brand-blue;
+    @apply text-white hover:text-brand-blue bottom-6 top-auto lg:bottom-auto lg:top-1/2;
+    &:after {
+      @apply text-2xl md:text-3xl lg:text-[44px];
+    }
   }
   .swiper-button-prev,
   .swiper-rtl .swiper-button-next {
-    @apply left-2 md:left-4 lg:left-5 xl:left-8;
+    @apply right-10 left-auto md:right-auto md:left-4 lg:left-5 xl:left-8;
   }
   .swiper-button-next,
   .swiper-rtl .swiper-button-prev {
@@ -32,6 +35,25 @@
   }
   .swiper-pagination-bullet-active {
     @apply bg-white opacity-100;
+  }
+}
+
+#testimonial-slider {
+  @apply pb-24 md:pb-0;
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply text-white opacity-50 hover:opacity-100 bottom-6 top-auto md:bottom-auto md:top-1/2;
+    &:after {
+      @apply text-2xl md:text-3xl lg:text-[44px];
+    }
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    @apply left-1/2 -translate-x-[120%] md:-translate-x-0 md:left-4 lg:left-5 xl:left-8;
+  }
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    @apply right-1/2 translate-x-[120%] md:translate-x-0 md:right-4 lg:right-5 xl:right-8;
   }
 }
 
@@ -54,7 +76,7 @@
       @apply text-slate-500;
     }
     &:nth-child(odd) {
-      @apply -translate-y-5;
+      @apply -translate-y-0 md:-translate-y-5;
     }
     &:hover {
       @apply bg-gradient-to-tr from-[#6852ED] to-[#0583FF] shadow-[0_0_20px_rgb(66,157,247,1)];
@@ -106,7 +128,17 @@
   .with_frm_style input[type='number'],
   .with_frm_style input[type='url'],
   .with_frm_style input[type='tel'] {
-    @apply text-lg placeholder:text-white/50 text-white rounded-none bg-transparent border-t-0 border-x-0 border-b-2 border-white focus:outline-none focus:ring-0 h-[52px];
+    @apply text-lg placeholder:text-white/50 text-white rounded-none bg-transparent border-t-0 border-x-0 border-b-2 border-white focus:outline-none focus:ring-0 h-[52px] shadow-none;
+    @apply px-2 py-2 lg:py-3;
+  }
+  .with_frm_style .frm_inside_container {
+    @apply pt-4;
+  }
+  .with_frm_style .frm_inside_container > label {
+    @apply left-0 px-2 py-2 lg:py-3;
+  }
+  .frm_style_formidable-style.with_frm_style .form-field {
+    @apply mb-2;
   }
   .frm_style_formidable-style.with_frm_style
     .form-field
@@ -117,13 +149,13 @@
     @apply outline-none ring-0 bg-transparent border-brand-blue text-white;
   }
   .with_frm_style .frm_inside_container > label {
-    @apply text-white h-[52px] text-lg leading-9 placeholder:text-white;
+    @apply text-white h-[52px] top-4 text-lg leading-6 placeholder:text-white;
   }
   .with_frm_style .frm_primary_label {
     @apply text-white/50;
   }
   .with_frm_style .frm_inside_container.frm_label_float_top > label {
-    @apply text-sm h-auto left-[10px];
+    @apply text-sm h-auto p-0 left-2 top-0;
   }
   .frm_style_formidable-style.with_frm_style .frm_submit button,
   .frm_style_formidable-style-2.with_frm_style .frm_submit button {
@@ -140,7 +172,7 @@
     font-size: 0px;
   }
   .frm_inline_form .frm_submit {
-    @apply pt-6;
+    @apply pt-6 lg:pt-4;
   }
   .frm_style_formidable-style.with_frm_style
     .frm_blank_field

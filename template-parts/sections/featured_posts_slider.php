@@ -12,15 +12,15 @@ $featured_posts_slider = get_sub_field('featured_posts_slider');
 
 if ($featured_posts_slider) : ?>
 
-  <section class="relative z-20 pb-24">
-    <div class="container max-w-screen-xl -mt-12 relative">
-      <div class="bg-brand-blue text-white rounded-[20px] px-14 py-14 shadow-2xl">
-        <div class="flex gap-x-14 items-center">
-          <div class="w-1/6 flex items-center">
-            <div class="font-bold text-lg pb-4 border-b-2 border-white">FEATURED</div>
+  <section class="relative z-20 pt-10 pb-12 lg:pb-24 lg:pt-0">
+    <div class="container max-w-screen-xl lg:-mt-12 relative">
+      <div class="bg-brand-blue text-white rounded-[20px] p-6 md:p-8 lg:p-10 xl:p-14 shadow-2xl">
+        <div class="flex flex-col lg:flex-row lg:gap-x-12 xl:gap-x-14 items-center">
+          <div class="w-full lg:w-1/6 flex items-center">
+            <div class="font-bold text-lg lg:pb-4 lg:border-b-2 lg:border-white pt-2 lg:pt-0">FEATURED</div>
           </div>
-          <div id="featured-posts-slider" class="w-5/6">
-            <div class="border-b border-white mb-8 relative flex justify-end -mt-6">
+          <div id="featured-posts-slider" class="w-full lg:w-5/6">
+            <div class="border-b border-white mb-8 relative flex justify-end -mt-5 lg:-mt-6">
               <div class="absolute left-0 -bottom-px h-2 w-20 bg-brand-yellow"></div>
               <div class="flex gap-x-1">
                 <button class="swiper-prev inline-block bg-black text-brand-yellow p-2 bg-opacity-50 hover:bg-opacity-100">
@@ -40,11 +40,11 @@ if ($featured_posts_slider) : ?>
                   $permalink = get_the_permalink($post['post']->ID);
                   ?>
                   <div class="swiper-slide">
-                    <div class="flex gap-x-6">
-                      <div class="w-2/3">
-                        <h3 class="font-bold text-[34px] leading-tight"><a href="<?php echo $permalink ?>" class="hover:underline"><?php echo $post_title ?></a></h3>
+                    <div class="flex flex-col gap-4 lg:flex-row lg:gap-6">
+                      <div class="w-full lg:w-2/3">
+                        <h3 class="font-bold text-3xl md:text-[34px] leading-tight"><a href="<?php echo $permalink ?>" class="hover:underline"><?php echo $post_title ?></a></h3>
                       </div>
-                      <div class="w-1/3">
+                      <div class="w-full lg:w-1/3">
                         <?php if ($excerpt) : ?>
                           <div class="text-lg font-nunito">
                             <?php echo $excerpt ?>

@@ -29,6 +29,16 @@
     }, function() {
       $("#main-nav").removeClass("bg-brand-bluedark bg-opacity-95");
     });
+    $("#mobilemenu-open, #mobilemenu-overlay").click(function(e) {
+      e.preventDefault();
+      $("#mobilemenu").removeClass("translate-x-full");
+      $("#mobilemenu-overlay").removeClass("invisible opacity-0").addClass("visible opacity-100");
+    });
+    $("#mobilemenu-close").click(function(e) {
+      e.preventDefault();
+      $("#mobilemenu").addClass("translate-x-full");
+      $("#mobilemenu-overlay").removeClass("visible opacity-100").addClass("invisible opacity-0");
+    });
     $(".filter-resources").on("click", function(event) {
       $("#resources-search").val("");
       $(".filter-resources-buttons .filter-resources").removeClass("filter-active");

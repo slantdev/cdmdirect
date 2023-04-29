@@ -20,9 +20,9 @@ $view_all_link = $section_intro['view_all_link'];
   <div class="relative <?php echo $section_padding_top . ' ' . $section_padding_bottom ?>">
     <div class="relative">
       <div class="container max-w-screen-xl">
-        <div class="flex">
-          <div class="w-2/3">
-            <div class="absolute right-[40%] pr-10 left-0 h-full">
+        <div class="flex flex-col lg:flex-row">
+          <div class="w-full lg:w-2/3">
+            <div class="h-64 mb-6 lg:mb-0 w-full lg:w-auto -ml-4 md:-ml-6 lg:-ml-0 lg:absolute lg:right-[40%] lg:pr-10 lg:left-0 lg:h-full">
               <?php if ($image) : ?>
                 <img src='<?php echo $image['url'] ?>' alt='<?php echo $image['alt'] ?>' class="object-cover h-full w-full rounded-r-[300px]" />
               <?php else : ?>
@@ -30,15 +30,15 @@ $view_all_link = $section_intro['view_all_link'];
               <?php endif; ?>
             </div>
           </div>
-          <div class="w-1/3 order-2">
+          <div class="w-full lg:w-1/3 order-2">
             <?php if ($sub_headline) : ?>
               <h4><span class="inline-block pb-3 border-b-2 border-brand-blue text-lg text-slate-800 font-medium"><?php echo $sub_headline; ?></span></h4>
             <?php endif; ?>
             <?php if ($headline) : ?>
-              <h3 class="text-[34px] leading-tight font-bold text-brand-blue mt-6 mb-6"><?php echo $headline; ?></h3>
+              <h3 class="text-3xl lg:text-[34px] leading-tight font-bold text-brand-blue mt-6 mb-6"><?php echo $headline; ?></h3>
             <?php endif; ?>
             <?php if ($description) : ?>
-              <div class="text-lg mb-12 font-nunito">
+              <div class="text-lg mb-6 lg:mb-12 font-nunito">
                 <?php echo $description; ?>
               </div>
             <?php endif; ?>
@@ -49,7 +49,7 @@ $view_all_link = $section_intro['view_all_link'];
         </div>
       </div>
     </div>
-    <div class="container max-w-screen-xl mt-24">
+    <div class="container max-w-screen-xl mt-12 lg:mt-24">
       <?php
       $resources = get_sub_field('resources');
       $resources_category = $resources['resources_category'];
@@ -77,7 +77,7 @@ $view_all_link = $section_intro['view_all_link'];
       }
       $the_query = new WP_Query($args);
       if ($the_query->have_posts()) {
-        echo '<div class="grid grid-cols-3 gap-x-6">';
+        echo '<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 gap-x-6">';
         while ($the_query->have_posts()) {
           $the_query->the_post();
           $excerpt = wp_trim_words(get_the_excerpt(), $num_words = 30, $more = null);
@@ -88,7 +88,7 @@ $view_all_link = $section_intro['view_all_link'];
           echo '<div class="aspect-w-16 aspect-h-8">
               <img src="' . $img_src . '" alt="' . $title . '" class="object-cover h-full w-full" />
             </div>';
-          echo '<div class="p-8 pb-16 relative">
+          echo '<div class="p-6 pb-14 lg:p-8 lg:pb-16 relative">
               <h4 class="line-clamp-2 font-bold text-lg leading-tight text-slate-800 mb-4">' . $title . '</h4>
               <div class="line-clamp-2 font-nunito">' . $excerpt . '</div>
               <div class="absolute right-6 bottom-6">' . cdmdirect_icon(array('icon' => 'plus', 'group' => 'utilities', 'size' => '24', 'class' => 'text-brand-blue')) . '</div>

@@ -27,12 +27,12 @@ $description = get_sub_field('description');
         <?php get_template_part('template-parts/components/heading', '', array('field' => 'sub_headline', 'class' => 'font-medium', 'border' => $sub_headline_border)); ?>
       <?php } ?>
       <?php if ($headline) { ?>
-        <div class="max-w-prose mx-auto mt-12">
+        <div class="max-w-prose mx-auto mt-8 lg:mt-12">
           <?php get_template_part('template-parts/components/heading', '', array('field' => 'headline', 'class' => 'leading-tight font-bold text-brand-blue')); ?>
         </div>
       <?php } ?>
       <?php if ($description) { ?>
-        <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'text-lg')); ?>
+        <?php get_template_part('template-parts/components/description', '', array('field' => 'description', 'class' => 'text-base lg:text-lg')); ?>
       <?php } ?>
     </div>
 
@@ -40,8 +40,8 @@ $description = get_sub_field('description');
     $features = get_sub_field('features_grid')['features'];
     //preint_r($features);
     if ($features) : ?>
-      <div class="container max-w-screen-xl mt-20">
-        <div class="grid grid-cols-3 gap-20">
+      <div class="container max-w-screen-xl mt-16 lg:mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-20">
           <?php foreach ($features as $feature) : ?>
             <?php
             $icon_svg = $feature['icon_svg'];
@@ -55,8 +55,8 @@ $description = get_sub_field('description');
             ?>
             <div>
               <?php if ($icon_svg) : ?>
-                <div class="mb-4" style="<?php echo $icon_style ?>">
-                  <?php echo cdmdirect_icon(array('icon' => $icon_svg, 'group' => 'content', 'size' => '80')); ?>
+                <div class="mb-4 h-" style="<?php echo $icon_style ?>">
+                  <?php echo cdmdirect_icon(array('icon' => $icon_svg, 'group' => 'content', 'size' => '80', 'class' => 'w-16 lg:w-20')); ?>
                 </div>
               <?php endif; ?>
               <?php if ($title) : ?>
@@ -75,7 +75,7 @@ $description = get_sub_field('description');
     $more_button = get_sub_field('more_button');
     //preint_r($more_button);
     if ($more_button) : ?>
-      <div class="container max-w-screen-lg mt-20 text-center">
+      <div class="container max-w-screen-lg mt-16 lg:mt-20 text-center">
         <?php get_template_part('template-parts/components/buttons', '', array('field' => 'more_button', 'class' => '')); ?>
       </div>
     <?php endif; ?>

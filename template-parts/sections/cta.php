@@ -13,15 +13,14 @@ $button = get_sub_field('button');
 
 ?>
 
-<section class="pt-20 pb-16 bg-[#E4EDF2] relative z-10">
+<section class="pt-12 md:pt-16 lg:pt-20 pb-12 md:pb-14 lg:pb-16 bg-[#E4EDF2] relative z-10">
   <div class="container max-w-screen-xl">
-    <div class="flex justify-between items-center">
+    <div class="flex flex-col md:flex-row md:gap-x-10 md:justify-between md:items-center">
       <?php if ($text) { ?>
         <?php get_template_part('template-parts/components/heading', '', array('field' => 'text', 'class' => 'font-semibold text-[22px] text-[#554D89]')); ?>
       <?php } ?>
-      <div>
-        <?php get_template_part('template-parts/components/buttons', '', array('field' => 'button', 'class' => '')); ?>
-        <!-- <a href="#" class="btn btn-orange">Contact Us</a> -->
+      <div class="mt-4 md:mt-0">
+        <?php get_template_part('template-parts/components/buttons', '', array('field' => 'button', 'class' => '!text-left md:!text-right !mb-0 whitespace-nowrap')); ?>
       </div>
     </div>
   </div>
