@@ -22,13 +22,11 @@ $view_all_link = $section_intro['view_all_link'];
       <div class="container max-w-screen-xl">
         <div class="flex flex-col lg:flex-row">
           <div class="w-full lg:w-2/3">
-            <div class="h-64 mb-6 lg:mb-0 w-full lg:w-auto -ml-4 md:-ml-6 lg:-ml-0 lg:absolute lg:right-[40%] lg:pr-10 lg:left-0 lg:h-full">
-              <?php if ($image) : ?>
+            <?php if ($image) : ?>
+              <div class="h-64 mb-6 lg:mb-0 w-full lg:w-auto -ml-4 md:-ml-6 lg:-ml-0 lg:absolute lg:right-[40%] lg:pr-10 lg:left-0 lg:h-full rounded-r-[300px] bg-slate-100 overflow-hidden">
                 <img src='<?php echo $image['url'] ?>' alt='<?php echo $image['alt'] ?>' class="object-cover h-full w-full rounded-r-[300px]" />
-              <?php else : ?>
-                <div class="h-full w-full rounded-r-[300px] bg-slate-100"></div>
-              <?php endif; ?>
-            </div>
+              </div>
+            <?php endif; ?>
           </div>
           <div class="w-full lg:w-1/3 order-2">
             <?php if ($sub_headline) : ?>
