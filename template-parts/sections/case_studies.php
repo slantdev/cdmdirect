@@ -21,7 +21,7 @@ $view_all_link = get_sub_field('view_all_link');
 
 ?>
 
-<section id="<?php echo $section_id ?>" style="<?php echo $section_style ?>">
+<section id="<?php echo $section_id ?>" style="<?php echo $section_style ?>" class="overflow-hidden">
   <div class="relative z-10 <?php echo $section_padding_top . ' ' . $section_padding_bottom ?>">
     <div class="container max-w-screen-xl relative">
       <div class="flex flex-col gap-4 md:flex-row md:gap-x-10 lg:gap-x-12">

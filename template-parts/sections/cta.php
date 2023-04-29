@@ -13,7 +13,7 @@ $button = get_sub_field('button');
 
 ?>
 
-<section class="pt-12 md:pt-16 lg:pt-20 pb-12 md:pb-14 lg:pb-16 bg-[#E4EDF2] relative z-10">
+<section class="pt-12 md:pt-16 lg:pt-20 pb-12 md:pb-14 lg:pb-16 bg-[#E4EDF2] relative z-10 overflow-hidden">
   <div class="container max-w-screen-xl">
     <div class="flex flex-col md:flex-row md:gap-x-10 md:justify-between md:items-center">
       <?php if ($text) { ?>

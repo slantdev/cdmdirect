@@ -14,7 +14,7 @@ $testimonial_posts = get_sub_field('testimonial_posts');
 
 ?>
 
-<section id="<?php echo $section_id ?>" class="bg-brand-blue" style="<?php echo $section_style ?>">
+<section id="<?php echo $section_id ?>" class="bg-brand-blue overflow-hidden" style="<?php echo $section_style ?>">
   <div class="relative z-10 <?php echo $section_padding_top . ' ' . $section_padding_bottom ?>">
     <?php if ($headline) : ?>
       <div class="container max-w-screen-md">
