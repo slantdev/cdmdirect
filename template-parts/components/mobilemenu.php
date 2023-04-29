@@ -53,34 +53,6 @@
                   </div>
                 <?php endif; ?>
               </li>
-              <li class="<?php echo $li_class ?>">
-                <a href="<?php echo $menu_item['url'] ?>" target="<?php echo $menu_item['target'] ?>" class="inline-block text-white/80 hover:text-white font-medium uppercase whitespace-nowrap transition duration-300"><?php echo $menu_item['title'] ?></a>
-                <?php if ($has_megamenu && $megamenu_items) : ?>
-                  <div class="pl-4">
-                    <div class="flex flex-col divide-y divide-white/30">
-                      <?php
-                      $menu_heading = $megamenu_items['menu_heading'];
-                      $menu_description = $megamenu_items['menu_description'];
-                      $submenu_items = $megamenu_items['submenu_items'];
-                      ?>
-                      <?php if ($submenu_items) : ?>
-                        <ul class="flex flex-col divide-y divide-white/30 text-lg">
-                          <?php foreach ($submenu_items as $submenu_id => $item) : ?>
-                            <?php
-                            $submenu_item = $item['submenu_item'];
-                            ?>
-                            <li class="py-3">
-                              <a href="<?php echo $submenu_item['url'] ?>" class="text-white/80 hover:text-white inline-block text-base transition duration-300">
-                                <span><?php echo $submenu_item['title'] ?></span>
-                              </a>
-                            </li>
-                          <?php endforeach; ?>
-                        </ul>
-                      <?php endif; ?>
-                    </div>
-                  </div>
-                <?php endif; ?>
-              </li>
             <?php endif; ?>
           <?php endforeach; ?>
         </ul>
