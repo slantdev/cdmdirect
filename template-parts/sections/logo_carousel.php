@@ -32,7 +32,7 @@ $size = 'full';
       }
     ';
       ?>
-      <div id="<?php echo $carousel_id ?>" class="swiper overflow-visible px-8">
+      <div id="<?php echo $carousel_id ?>" class="swiper lg:overflow-visible px-8 pb-4">
         <div class="swiper-wrapper">
           <?php foreach ($logo_gallery as $logo) : ?>
             <div class="swiper-slide">
