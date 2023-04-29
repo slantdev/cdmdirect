@@ -296,7 +296,10 @@
   .with_frm_style .frm-card-element.StripeElement,
   .with_frm_style .chosen-container-multi .chosen-choices,
   .with_frm_style .chosen-container-single .chosen-single {
-    @apply shadow-none rounded-none px-1 border-t-0 border-x-0 border-b border-slate-400 focus:outline-0 focus:ring-0 focus:border-brand-blue;
+    @apply shadow-none rounded-none px-1 border-t-0 border-x-0 border-b border-slate-400 focus:outline-0 focus:ring-0 focus:border-brand-blue bg-transparent;
+    &:focus {
+      @apply !bg-transparent;
+    }
   }
   .with_frm_style .frm_inside_container > label {
     @apply px-1 text-slate-500;
