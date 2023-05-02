@@ -39,11 +39,11 @@ if ($hero_slider) : ?>
               <div class="flex h-full items-center text-white lg:px-24 xl:px-28 2xl:px-0">
                 <div class="max-w-[880px]">
                   <?php if ($sub_headline) : ?>
-                    <h2 class="font-bold text-xl lg:text-2xl xl:text-[28px]"><?php echo $sub_headline; ?></h2>
+                    <h3 class="font-normal text-xl lg:text-2xl xl:text-[28px]"><?php echo $sub_headline; ?></h3>
                     <div class="w-14 lg:w-[70px] border-b-[3px] border-solid border-brand-orange my-6"></div>
                   <?php endif; ?>
                   <?php if ($headline) : ?>
-                    <h1 class="font-light text-4xl lg:text-5xl xl:text-[54px] lg:leading-tight"><?php echo $headline; ?></h1>
+                    <h2 class="font-bold text-4xl lg:text-5xl xl:text-[54px] lg:leading-tight"><?php echo $headline; ?></h2>
                   <?php endif; ?>
                   <?php if ($description) : ?>
                     <div class="mt-6 text-base lg:text-lg font-medium">
@@ -70,6 +70,11 @@ if ($hero_slider) : ?>
         // pagination: {
         //   el: '#hero-slider .swiper-pagination',
         // },
+        autoplay: {
+          delay: 8000,
+        },
+        speed: 800,
+        effect: 'fade',
         navigation: {
           nextEl: '#hero-slider .swiper-button-next',
           prevEl: '#hero-slider .swiper-button-prev',
