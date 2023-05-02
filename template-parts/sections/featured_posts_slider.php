@@ -12,8 +12,8 @@ $featured_posts_slider = get_sub_field('featured_posts_slider');
 
 if ($featured_posts_slider) : ?>
 
-  <section class="relative z-20 pt-10 pb-12 lg:pb-24 lg:pt-0 overflow-hidden">
-    <div class="container max-w-screen-xl lg:-mt-12 relative">
+  <section class="relative z-20 pt-10 pb-12 lg:pb-24 lg:pt-0 overflow-hidden lg:-translate-y-12">
+    <div class="container max-w-screen-xl relative">
       <div class="bg-brand-blue text-white rounded-[20px] p-6 md:p-8 lg:p-10 xl:p-14 shadow-2xl">
         <div class="flex flex-col lg:flex-row lg:gap-x-12 xl:gap-x-14 items-center">
           <div class="w-full lg:w-1/6 flex items-center">
