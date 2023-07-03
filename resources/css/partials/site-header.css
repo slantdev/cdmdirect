@@ -110,6 +110,6 @@
 #header-search {
   @apply w-0 hidden;
   &.show {
-    @apply block w-screen max-w-md md:w-[280px];
+    @apply block w-screen max-w-md md:w-[290px];
   }
 }
