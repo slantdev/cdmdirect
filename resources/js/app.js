@@ -70,6 +70,22 @@ jQuery(function ($) {
     $('body').removeClass('overflow-y-hidden');
   });
 
+  // Header Search
+  $('#header-search-button').on('click', function () {
+    $('#header-search').toggleClass('show');
+    $('#searchform-input').val('');
+    $('#searchform-input').focus();
+  });
+  $(window).click(function () {
+    if ($('#header-search').hasClass('show')) {
+      $('#header-search').removeClass('show');
+      $('#searchform-input').val('');
+    }
+  });
+  $('#header-search, #header-search-button').click(function (event) {
+    event.stopPropagation();
+  });
+
   // Resources Filter
   $('.filter-resources').on('click', function (event) {
     $('#resources-search').val('');

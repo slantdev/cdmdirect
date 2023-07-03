@@ -41,7 +41,17 @@
         </a>
         <div class="hidden xl:flex justify-end items-center gap-x-6 4xl:gap-x-12">
           <?php get_template_part('template-parts/components/megamenu'); ?>
-          <div><button class="p-4 rounded-full bg-brand-yellow"><?php echo cdmdirect_icon(array('icon' => 'search', 'group' => 'utilities', 'size' => '24', 'class' => 'text-white')); ?></button></div>
+          <div class="relative">
+            <button id="header-search-button" class="p-4 rounded-full bg-brand-yellow hover:bg-opacity-80"><?php echo cdmdirect_icon(array('icon' => 'search', 'group' => 'utilities', 'size' => '24', 'class' => 'text-white')); ?></button>
+            <div id="header-search" class="absolute right-0 top-0 transition-all duration-300">
+              <form id="header-searchform" class="flex bg-white shadow-lg rounded-full" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+                <input id="searchform-input" type="text" class="text-gray-700 px-6 rounded-full py-2 w-full bg-transparent border-transparent focus:outline-none focus:border-transparent focus:ring-0" name="s" placeholder="Search" value="<?php echo get_search_query(); ?>">
+                <button class="flex-none p-4 flex items-center justify-center text-sm rounded-full font-semibold bg-brand-yellow hover:bg-opacity-80 whitespace-nowrap cursor-pointer" type="submit">
+                  <?php echo cdmdirect_icon(array('icon' => 'search', 'group' => 'utilities', 'size' => '24', 'class' => 'text-white')); ?>
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
         <button type="button" id="mobilemenu-open" class="p-2 text-white xl:hidden">
           <svg class="w-8 h-8" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

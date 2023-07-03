@@ -1,1 +1,103 @@
-(()=>{jQuery(function(e){var o=100;r(),e(window).scroll(function(){r()});function l(){return window.pageYOffset||document.documentElement.scrollTop}function r(){var a=l();a>=o?e(".site-header").addClass("header-shrink"):e(".site-header").removeClass("header-shrink")}e(".menu-has-article").hover(function(){e(".menu-article").hide();let a=e(this).data("target");e("#"+a).fadeIn("slow",function(){})},function(){}),e(".main-nav--ul > li").hover(function(){e("#main-nav").addClass("bg-brand-bluedark bg-opacity-95")},function(){e("#main-nav").removeClass("bg-brand-bluedark bg-opacity-95")}),e("#mobilemenu-open").click(function(a){a.preventDefault(),e("#mobilemenu").removeClass("translate-x-full"),e("#mobilemenu-overlay").removeClass("invisible opacity-0").addClass("visible opacity-100"),e("body").addClass("overflow-y-hidden")}),e("#mobilemenu-close, #mobilemenu-overlay").click(function(a){a.preventDefault(),e("#mobilemenu").addClass("translate-x-full"),e("#mobilemenu-overlay").removeClass("visible opacity-100").addClass("invisible opacity-0"),e("body").removeClass("overflow-y-hidden")}),e(".filter-resources").on("click",function(a){e("#resources-search").val(""),e(".filter-resources-buttons .filter-resources").removeClass("filter-active"),e(this).addClass("filter-active"),e(".resources-loader .spinning-loader").removeClass("opacity-0").addClass("opacity-100"),e(".resources-grid .blocker").show(),a.preventDefault(),e.ajax({type:"POST",url:ajax.url,dataType:"html",data:{action:"filter_resources",category:e(this).data("id"),postsperpage:e(this).data("postsperpage")},success:function(s){e(".resources-grid").html(s),e(".resources-loader .spinning-loader").removeClass("opacity-100").addClass("opacity-0")}})}),e("#resources-search-button").on("click",function(a){let s=e("#resources-search").val();e.ajax({type:"POST",url:ajax.url,dataType:"html",data:{action:"search_resources",query:s},beforeSend:function(){e(".resources-loader .spinning-loader").removeClass("opacity-0").addClass("opacity-100"),e(".resources-grid .blocker").show(),e(".filter-resources").removeClass("filter-active")},success:function(i){e(".resources-grid").html(i),e('.filter-resources[data-id="all"]').addClass("filter-active"),e(".resources-loader .spinning-loader").removeClass("opacity-100").addClass("opacity-0")}})})});})();
+(() => {
+  // resources/js/app.js
+  jQuery(function($) {
+    var shrinkHeader = 100;
+    headerShrink();
+    $(window).scroll(function() {
+      headerShrink();
+    });
+    function getCurrentScroll() {
+      return window.pageYOffset || document.documentElement.scrollTop;
+    }
+    function headerShrink() {
+      var scroll = getCurrentScroll();
+      if (scroll >= shrinkHeader) {
+        $(".site-header").addClass("header-shrink");
+      } else {
+        $(".site-header").removeClass("header-shrink");
+      }
+    }
+    $(".menu-has-article").hover(function() {
+      $(".menu-article").hide();
+      let dataArticle = $(this).data("target");
+      $("#" + dataArticle).fadeIn("slow", function() {
+      });
+    }, function() {
+    });
+    $(".main-nav--ul > li").hover(function() {
+      $("#main-nav").addClass("bg-brand-bluedark bg-opacity-95");
+    }, function() {
+      $("#main-nav").removeClass("bg-brand-bluedark bg-opacity-95");
+    });
+    $("#mobilemenu-open").click(function(e) {
+      e.preventDefault();
+      $("#mobilemenu").removeClass("translate-x-full");
+      $("#mobilemenu-overlay").removeClass("invisible opacity-0").addClass("visible opacity-100");
+      $("body").addClass("overflow-y-hidden");
+    });
+    $("#mobilemenu-close, #mobilemenu-overlay").click(function(e) {
+      e.preventDefault();
+      $("#mobilemenu").addClass("translate-x-full");
+      $("#mobilemenu-overlay").removeClass("visible opacity-100").addClass("invisible opacity-0");
+      $("body").removeClass("overflow-y-hidden");
+    });
+    $("#header-search-button").on("click", function() {
+      $("#header-search").toggleClass("show");
+      $("#searchform-input").val("");
+      $("#searchform-input").focus();
+    });
+    $(window).click(function() {
+      if ($("#header-search").hasClass("show")) {
+        $("#header-search").removeClass("show");
+        $("#searchform-input").val("");
+      }
+    });
+    $("#header-search, #header-search-button").click(function(event) {
+      event.stopPropagation();
+    });
+    $(".filter-resources").on("click", function(event) {
+      $("#resources-search").val("");
+      $(".filter-resources-buttons .filter-resources").removeClass("filter-active");
+      $(this).addClass("filter-active");
+      $(".resources-loader .spinning-loader").removeClass("opacity-0").addClass("opacity-100");
+      $(".resources-grid .blocker").show();
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: ajax.url,
+        dataType: "html",
+        data: {
+          action: "filter_resources",
+          category: $(this).data("id"),
+          postsperpage: $(this).data("postsperpage")
+        },
+        success: function(res) {
+          $(".resources-grid").html(res);
+          $(".resources-loader .spinning-loader").removeClass("opacity-100").addClass("opacity-0");
+        }
+      });
+    });
+    $("#resources-search-button").on("click", function(event) {
+      let search_query = $("#resources-search").val();
+      $.ajax({
+        type: "POST",
+        url: ajax.url,
+        dataType: "html",
+        data: {
+          action: "search_resources",
+          query: search_query
+        },
+        beforeSend: function() {
+          $(".resources-loader .spinning-loader").removeClass("opacity-0").addClass("opacity-100");
+          $(".resources-grid .blocker").show();
+          $(".filter-resources").removeClass("filter-active");
+        },
+        success: function(res) {
+          $(".resources-grid").html(res);
+          $('.filter-resources[data-id="all"]').addClass("filter-active");
+          $(".resources-loader .spinning-loader").removeClass("opacity-100").addClass("opacity-0");
+        }
+      });
+    });
+  });
+})();

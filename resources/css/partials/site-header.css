@@ -106,3 +106,10 @@
   position: relative;
   top: -1px;
 }
+
+#header-search {
+  @apply w-0 hidden;
+  &.show {
+    @apply block w-screen max-w-md md:w-[280px];
+  }
+}
