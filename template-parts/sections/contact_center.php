@@ -51,7 +51,7 @@ $contact_center = get_sub_field('contact_center');
             $city = $address['city'];
             $address = $address['address'];
             echo '<div>';
-            if ($image) {
+            if ($map_iframe) {
               if (count($addresses) > 1) {
                 echo '<div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">';
               } else {
