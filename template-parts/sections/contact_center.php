@@ -46,17 +46,18 @@ $contact_center = get_sub_field('contact_center');
             echo '<div class="grid grid-cols-1 gap-10 lg:gap-10 xl:gap-16 mt-8 lg:mt-12">';
           }
           foreach ($addresses as $address) :
-            $image = $address['image'];
+            //$image = $address['image'];
+            $map_iframe = $address['map_iframe'];
             $city = $address['city'];
             $address = $address['address'];
             echo '<div>';
             if ($image) {
               if (count($addresses) > 1) {
-                echo '<div class="aspect-w-3 aspect-h-2">';
+                echo '<div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">';
               } else {
-                echo '<div class="aspect-w-3 aspect-h-2 lg:aspect-w-16 lg:aspect-h-6">';
+                echo '<div class="aspect-w-3 aspect-h-2 lg:aspect-w-16 lg:aspect-h-6 rounded-lg overflow-hidden">';
               }
-              echo '<img src="' . $image['url'] . '" alt="" class="object-cover h-full w-full rounded-lg" />';
+              echo $map_iframe;
               echo '</div>';
             }
             echo '<div class="mt-4 lg:mt-10">';
